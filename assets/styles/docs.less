@@ -1,0 +1,19 @@
+@import "../../frontkit/styles/variables.less";
+@import "../../frontkit/styles/mixins.less";
+
+.grid-example {
+  [class*="col-span"] {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid darken(@gray-lighter, 10%);
+    background-color: @gray-lighter;
+
+    &:hover {
+      background-color: darken(@gray-lighter, 5%);
+    }
+  }
+
+  .row {
+    margin-bottom: (@line-height-base / 2);
+  }
+}
