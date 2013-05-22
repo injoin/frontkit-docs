@@ -27,44 +27,44 @@ html
 						h4 Grid example
 						.docs-example.grid-example
 							.row
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
-								.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
+								.col.col-span1 1
 
 							.row
-								.col-span3 3
-								.col-span3 3
-								.col-span3 3
-								.col-span3 3
+								.col.col-span3 3
+								.col.col-span3 3
+								.col.col-span3 3
+								.col.col-span3 3
 
 							.row
-								.col-span4 4
-								.col-span4 4
-								.col-span4 4
+								.col.col-span4 4
+								.col.col-span4 4
+								.col.col-span4 4
 
 							.row
-								.col-span6 6
-								.col-span6 6
+								.col.col-span6 6
+								.col.col-span6 6
 
 					section#css-grid-offset
 						h4 Offsetting columns
 						.docs-example.grid-example
 							.row
-								.col-span4 4
-								.col-span4.col-offset4 4 offset 4
+								.col.col-span4 4
+								.col.col-span4.col-offset4 4 offset 4
 
 							.row
-								.col-span3.col-offset3 3 offset 3
-								.col-span3.col-offset3 3 offset 3
+								.col.col-span3.col-offset3 3 offset 3
+								.col.col-span3.col-offset3 3 offset 3
 
 				// Typography
 				article#css-type
@@ -275,7 +275,7 @@ html
 						- inputTypes = [ "text", "password", "datetime", "datetime-local", "date", "month", "week", "time", "number", "email", "url", "search", "tel", "color" ]
 						ul.list-unstyled.row
 							each type in inputTypes
-								li.col-span3
+								li.col.col-span3
 									i.icon.icon-ok
 									= " " + type
 
@@ -326,9 +326,15 @@ html
 						h4 Extending form controls
 
 						.docs-example
-							.control-group
-								input(type="text")
-								button.btn
+							.input-group.col.col-span9
+								.input-group-addon @
+								input(type="text", placeholder="E-mail")
+							
+							.input-group.col.col-span9
+								input(type="search", placeholder="Search")
+								.input-group-btn
+									button.btn
+										i.icon.icon-search
 
 				article#css-buttons
 					.page-header
