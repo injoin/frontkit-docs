@@ -8,7 +8,7 @@ module.exports = function( grunt ) {
 				tasks: [ "hub" ]
 			},
 			docs: {
-				files: "templates/*.jade",
+				files: "templates/**/*.jade",
 				tasks: [ "default" ]
 			},
 			less: {
