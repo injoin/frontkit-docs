@@ -5,8 +5,7 @@
 		"grunt-contrib-less":   "*",
 		"grunt-contrib-watch":  "*",
 		"grunt-contrib-clean":  "*",
-		"grunt-templater":      "*",
-		"grunt-hub":            "*",
-		"swig":                 "*"
+		"grunt-swig":           "*",
+		"grunt-hub":            "*"
 	}
 }
