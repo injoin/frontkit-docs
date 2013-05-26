@@ -9,9 +9,9 @@
     </head>
     <body class="docs">
         <aside class="docs-sidebar">
-            <hgroup class="page-header">
+            <header class="page-header">
                 <h3>FrontKit</h3>
-            </hgroup>
+            </header>
 
             {% include "./sidebar.swig" %}
         </aside>

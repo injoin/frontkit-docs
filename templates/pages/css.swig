@@ -81,8 +81,9 @@
                 <p>Nullam eget erat arcu. Phasellus sit amet augue eget mauris pulvinar posuere. Pellentesque convallis semper libero vitae ultrices. Donec egestas vehicula mauris ac porttitor. Donec quis urna ac tellus facilisis sollicitudin non eget purus.</p>
                 <p>Proin tortor nunc, scelerisque pulvinar ultricies sodales, imperdiet eget sem. Donec nec neque et ligula tristique porta in nec risus. Cras id faucibus diam. Phasellus lacus mauris, vulputate ac aliquam at, mattis et velit. Cras eu ante nisi, ac ornare neque. Morbi auctor mollis orci. Nam aliquam luctus semper. Cras varius lacinia vulputate.</p>
             </div>
+            
             <h5>Lead paragraph</h5>
-            <p>If you need to make some paragraph stand out from the rest, just add to it the <code>lead</code> class:</p></p>
+            <p>If you need to make some paragraph stand out from the rest, just add to it the <code>lead</code> class:</p>
             <div class="docs-example">
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida, mi vitae ultricies bibendum, justo metus ultricies tortor, eget aliquet quam risus et turpis.</p>
             </div>
@@ -594,7 +595,7 @@
                 <div class="input-group col col-span12">
                     <input type="search" placeholder="Search">
                     <div class="input-group-btn">
-                        <button class="btn"><i class="icon icon-search"></i></button>
+                        <button class="btn btn-default"><i class="icon icon-search"></i></button>
                     </div>
                 </div>
             </div>
@@ -610,7 +611,7 @@
         <!-- Options-->
         <section id="css-buttons-options">
             <h4>Button options</h4>
-            <p>Various styles for</p>
+            <p>Various styles for the best purpose of your button.</p>
 
             <table class="table">
                 <colgroup>
@@ -628,7 +629,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <button class="btn">Default</button>
+                            <button class="btn btn-default">Default</button>
                         </td>
                         <td><code>btn btn-default</code></td>
                         <td>Default button.</td>
@@ -682,8 +683,12 @@
         <!-- Sizes-->
         <section id="css-buttons-sizes">
             <h4>Button Sizes</h4>
+            <p>Need bigger or smaller buttons? Go with <code>.btn-large</code> or <code>.btn-small</code>!</p>
+            
             <div class="docs-example">
-                <button type="button" class="btn btn-default"></button>
+                <button type="button" class="btn btn-default btn-large">Large button</button>
+                <button type="button" class="btn btn-default">Default button</button>
+                <button type="button" class="btn btn-default btn-small">Small button</button>
             </div>
         </section>
     </article>
