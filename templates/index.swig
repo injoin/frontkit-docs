@@ -17,7 +17,20 @@
         </aside>
 
         <div class="docs-content">
-            {% include "pages/css.swig" %}
+            <!-- CSS Section-->
+            <div id="css">
+                <div class="page-header">
+                    <h2>CSS</h2>
+                </div>
+                
+                {% include "css/grid.swig" %}
+                {% include "css/type.swig" %}
+                {% include "css/code.swig" %}
+                {% include "css/lists.swig" %}
+                {% include "css/tables.swig" %}
+                {% include "css/forms.swig" %}
+                {% include "css/buttons.swig" %}
+            </div>
         </div>
     </body>
 </html>
