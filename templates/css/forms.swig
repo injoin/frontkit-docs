@@ -128,6 +128,11 @@
         <h4>Control States</h4>
         
         <h5>Disabled/read-only inputs</h5>
+        <p>Whenever you don't want a user to type in your input field, you may use <code>disabled</code> or <code>readonly</code> attributes. They work differently:</p>
+        <ul>
+            <li><code>readonly</code> fields will be sent in the form submission, and the value may be accessed.</li>
+            <li><code>disabled</code> fields will not be sent when the form is submited, and they will not allow you to access its value.</li>
+        </ul>
         <div class="docs-example">
             <input type="text" disabled value="I'm a disabled input">
             <input type="text" readonly value="I'm a read-only input">
@@ -138,25 +143,30 @@
         </div>
 
         <h5>Focus</h5>
+        <p>An smooth and beautiful style for your focused inputs.</p>
         <div class="docs-example">
             <input type="text" id="focusedInput" placeholder="That's a focused input">
         </div>
         
-        <h5>Validation states</h5>
-        <div class="docs-example">
-            <div class="control-group">
-                <label>Input with warning</label>
-                <input type="text" class="has-warning">
-            </div>
-
-            <div class="control-group">
-                <label>Input with error</label>
-                <input type="text" class="has-error">
-            </div>
-
-            <div class="control-group">
-                <label>Input with success</label>
-                <input type="text" class="has-success">
+        <div>
+            <h5>Validation states</h5>
+            <p>Show the user how an input has been validated with three validation states: warning, error and success.</p>
+            
+            <div class="docs-example">
+                <div class="control-group">
+                    <label>Input with warning</label>
+                    <input type="text" class="has-warning">
+                </div>
+    
+                <div class="control-group">
+                    <label>Input with error</label>
+                    <input type="text" class="has-error">
+                </div>
+    
+                <div class="control-group">
+                    <label>Input with success</label>
+                    <input type="text" class="has-success">
+                </div>
             </div>
         </div>
     </section>
