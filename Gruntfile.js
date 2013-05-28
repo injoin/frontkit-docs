@@ -11,8 +11,14 @@ module.exports = function( grunt ) {
 				files: "templates/**/*.swig",
 				tasks: [ "html" ]
 			},
+			
+			// Allows us to recompile our docs whenever we change something in mixins/variables files
 			less: {
-				files: "assets/**/*.less",
+				files: [
+					"assets/**/*.less",
+					"frontkit/styles/variables.less",
+					"frontkit/styles/mixins.less"
+				],
 				tasks: [ "less" ]
 			}
 		},
@@ -42,6 +48,8 @@ module.exports = function( grunt ) {
 				dest: "./",
 				generateSitemap: false,
 				generateRobotstxt: false,
+				
+				// Templates data
 				menus: grunt.file.readJSON( "data/menus.json" )
 			}
 		}
