@@ -1,5 +1,10 @@
 {
 	"name": "injoin-frontend-docs",
+	"version": "0.0.0",
+	"repository": {
+		"type": "git",
+		"url":  "https://github.com/injoin/frontkit-docs.git"
+	},
 	"devDependencies": {
 		"grunt":                "~0.4.0",
 		"grunt-contrib-less":   "*",

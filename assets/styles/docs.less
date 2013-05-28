@@ -1,6 +1,11 @@
 @import "../../frontkit/styles/variables.less";
 @import "../../frontkit/styles/mixins.less";
 
+.docs-sidebar .nav.nav-list .icon {
+  position: absolute;
+  right: ( @line-height-computed / 2 );
+}
+
 .grid-example {
   .col {
     padding-top: 5px;
@@ -16,4 +21,8 @@
   .row {
     margin-bottom: ( @line-height-computed / 2 );
   }
+}
+
+#focusedInput {
+  .input-focus();
 }

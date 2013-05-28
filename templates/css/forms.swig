@@ -127,6 +127,38 @@
     <section id="css-forms-states">
         <h4>Control States</h4>
         
+        <h5>Disabled/read-only inputs</h5>
+        <div class="docs-example">
+            <input type="text" disabled value="I'm a disabled input">
+            <input type="text" readonly value="I'm a read-only input">
+            <label class="checkbox">
+                <input type="checkbox" disabled>
+                You can't check this!
+            </label>
+        </div>
+
+        <h5>Focus</h5>
+        <div class="docs-example">
+            <input type="text" id="focusedInput" placeholder="That's a focused input">
+        </div>
+        
+        <h5>Validation states</h5>
+        <div class="docs-example">
+            <div class="control-group">
+                <label>Input with warning</label>
+                <input type="text" class="has-warning">
+            </div>
+
+            <div class="control-group">
+                <label>Input with error</label>
+                <input type="text" class="has-error">
+            </div>
+
+            <div class="control-group">
+                <label>Input with success</label>
+                <input type="text" class="has-success">
+            </div>
+        </div>
     </section>
     
     <hr>
@@ -141,6 +173,7 @@
                 <div class="input-group-addon">@</div>
                 <input type="text" placeholder="E-mail">
             </div>
+            
             <div class="input-group col col-span12">
                 <input type="search" placeholder="Search">
                 <div class="input-group-btn">
