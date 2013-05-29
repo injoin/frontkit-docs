@@ -86,5 +86,25 @@
             <button type="button" class="btn btn-default">Default button</button>
             <button type="button" class="btn btn-default btn-small">Small button</button>
         </div>
+        
+        <p>You may also create buttons that span its container fully. These are block level buttons, which use the class <code>.btn-block</code>.</p>
+        <div class="docs-example">
+            <button type="button" class="btn btn-default btn-block">Block level button</button>
+        </div>
+    </section>
+    
+    <section id="css-buttons-tags">
+        <h4>Button tags</h4>
+        <p>
+            You may use various tags for achieving that lovely buttons!<br>
+            Feel free to use <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code>.
+        </p>
+        
+        <div class="docs-example">
+            <a href="#" class="btn btn-default">Link</a>
+            <button type="button" class="btn btn-default">Button</button>
+            <input type="submit" class="btn btn-default" value="Submit">
+            <input type="button" class="btn btn-default" value="Input">
+        </div>
     </section>
 </article>

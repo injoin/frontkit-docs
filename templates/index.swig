@@ -8,12 +8,15 @@
         <link rel="stylesheet" href="assets/styles/docs.css">
     </head>
     <body class="docs">
-        <header class="hero-unit">
+        {# Header #}
+        <div class="hero-unit">
             <div class="container">
                 <h1>FrontKit</h1>
                 <p class="lead">The InJoin front-end development toolkit.</p>
             </div>
-        </header>
+        </div>
+        
+        {# Main contents #}
         <div class="container">
             <aside class="col col-span3 docs-sidebar">
                 {% include "./sidebar.swig" %}
@@ -34,6 +37,13 @@
                     {% include "css/forms.swig" %}
                     {% include "css/buttons.swig" %}
                 </div>
+            </div>
+        </div>
+    
+        {# Footer #}
+        <div class="footer">
+            <div class="container">
+                
             </div>
         </div>
     </body>
