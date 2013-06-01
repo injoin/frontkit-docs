@@ -1,9 +1,8 @@
 @import "../../frontkit/styles/variables.less";
 @import "../../frontkit/styles/mixins.less";
 
-.docs-sidebar .nav.nav-list .icon {
-  position: absolute;
-  right: ( @line-height-computed / 2 );
+body {
+  padding-top: @navbar-height;
 }
 
 .footer {
@@ -11,6 +10,11 @@
   padding: @line-height-computed 0;
   border-top: 1px solid lighten( @gray-light, 15% );
   background: fade( @gray-lighter, 50% );
+}
+
+.docs-sidebar .nav.nav-list .icon {
+  position: absolute;
+  right: ( @line-height-computed / 2 );
 }
 
 .grid-example {
@@ -28,6 +32,13 @@
   .row {
     margin-bottom: ( @line-height-computed / 2 );
   }
+}
+
+.docs-example + .highlight {
+  position: relative;
+  z-index: 1;
+  margin-top: -( @line-height-computed + 3px );
+  .border-top-radius( 0 );
 }
 
 #focusedInput {

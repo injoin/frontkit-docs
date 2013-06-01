@@ -39,6 +39,37 @@
                 <div class="col col-span6">6</div>
             </div>
         </div>
+{% highlight xml %}
+<div class="row">
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+    <div class="col col-span1">1</div>
+</div>
+<div class="row">
+    <div class="col col-span3">3</div>
+    <div class="col col-span3">3</div>
+    <div class="col col-span3">3</div>
+    <div class="col col-span3">3</div>
+</div>
+<div class="row">
+    <div class="col col-span4">4</div>
+    <div class="col col-span4">4</div>
+    <div class="col col-span4">4</div>
+</div>
+<div class="row">
+    <div class="col col-span6">6</div>
+    <div class="col col-span6">6</div>
+</div>
+{% endhighlight %}
     </section>
 
     <!-- Offset-->
@@ -54,5 +85,15 @@
                 <div class="col col-span3 col-offset3">3 offset 3</div>
             </div>
         </div>
+{% highlight xml %}
+<div class="row">
+    <div class="col col-span4">4</div>
+    <div class="col col-span4 col-offset4">4 offset 4</div>
+</div>
+<div class="row">
+    <div class="col col-span3 col-offset3">3 offset 3</div>
+    <div class="col col-span3 col-offset3">3 offset 3</div>
+</div>
+{% endhighlight %}
     </section>
 </article>

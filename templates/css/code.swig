@@ -11,6 +11,9 @@
         <div class="docs-example">
             <p>I like to use <code>&lt;div&gt;</code> tags for everything!</p>
         </div>
+{% highlight xml %}
+<p>I like to use <code>&lt;div&gt;</code> tags for everything!</p>
+{% endhighlight %}
     </section>
 
     <!-- Block-->
@@ -20,5 +23,8 @@
         <div class="docs-example">
             <pre>&lt;p&gt;That's a nice paragraph!&lt;/p&gt;</pre>
         </div>
+{% highlight xml %}
+<pre>&lt;p&gt;That's a nice paragraph!&lt;/p&gt;</pre>
+{% endhighlight %}
     </section>
 </article>

@@ -8,6 +8,9 @@
 		"name": "Typography",
 		"href": "#css-type"
 	}, {
+		"name": "Code",
+		"href": "#css-code"
+	}, {
 		"name": "Lists",
 		"href": "#css-lists"
 	}, {
@@ -22,5 +25,21 @@
 	}, {
 		"name": "Buttons",
 		"href": "#css-buttons"
+	}, {
+		"name": "Images",
+		"href": "#css-images"
+	}]
+}, {
+	"name": "Components",
+	"href": "#components",
+	"items": [{
+		"name": "Icons",
+		"href": "#components-icons"
+	}, {
+		"name": "Navbar",
+		"href": "#components-navbar"
+	}, {
+		"name": "Wells",
+		"href": "#components-wells"
 	}]
 }]

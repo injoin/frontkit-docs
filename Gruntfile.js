@@ -8,7 +8,7 @@ module.exports = function( grunt ) {
 				tasks: [ "hub" ]
 			},
 			docs: {
-				files: "templates/**/*.swig",
+				files: [ "templates/**/*.swig", "data/*.json" ],
 				tasks: [ "html" ]
 			},
 			
@@ -41,7 +41,8 @@ module.exports = function( grunt ) {
 		swig: {
 			docs: {
 				init: {
-					root: "templates/"
+					root: "templates/",
+					tags: require( "./build/swig-tags" )
 				},
 				cwd: "templates/",
 				src: [ "index.swig" ],
@@ -60,7 +61,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks("grunt-contrib-clean");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-
+	
 	grunt.registerTask( "html", [ "clean:html-pre", "swig" ] );
 	grunt.registerTask( "default", [ "hub", "less", "html" ] );
 };
