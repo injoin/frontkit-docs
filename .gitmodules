@@ -1,3 +1,3 @@
 [submodule "frontkit"]
 	path = frontkit
-	url = git://github.com/InJoin/frontkit.git
+	url = git://github.com/injoin/frontkit.git
