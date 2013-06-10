@@ -4,14 +4,14 @@ module.exports = function( grunt ) {
 	grunt.initConfig({
 		watch: {
 			submodule: {
-				files: [ "frontkit/styles/*.less" ],
+				files: [ "frontkit/styles/*.less", "frontkit/scripts/*.js" ],
 				tasks: [ "hub" ]
 			},
 			docs: {
 				files: [ "templates/**/*.swig", "data/*.json" ],
 				tasks: [ "html" ]
 			},
-			
+
 			// Allows us to recompile our docs whenever we change something in mixins/variables files
 			less: {
 				files: [
@@ -49,7 +49,7 @@ module.exports = function( grunt ) {
 				dest: "./",
 				generateSitemap: false,
 				generateRobotstxt: false,
-				
+
 				// Templates data
 				menus: grunt.file.readJSON( "data/menus.json" )
 			}
@@ -61,7 +61,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks("grunt-contrib-clean");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	
+
 	grunt.registerTask( "html", [ "clean:html-pre", "swig" ] );
 	grunt.registerTask( "default", [ "hub", "less", "html" ] );
 };
