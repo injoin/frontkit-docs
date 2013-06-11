@@ -45,7 +45,7 @@ module.exports = function( grunt ) {
 					tags: require( "./build/swig-tags" )
 				},
 				cwd: "templates/",
-				src: [ "index.swig" ],
+				src: [ "index.swig", "unit-tests.swig" ],
 				dest: "./",
 				generateSitemap: false,
 				generateRobotstxt: false,
