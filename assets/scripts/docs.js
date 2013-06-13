@@ -6,8 +6,8 @@
     $( document ).ready(function() {
         var $sidebar = $( ".docs-sidebar" ).children();
         $sidebar.width( $sidebar.width() ).affix({
-            offset: 40,
-            position: 70,
+            offset: 45,
+            position: 60,
             activate: function() {
 
             }
