@@ -5,7 +5,7 @@
     </header>
 
     <p>
-        Sometimes your content needs a simple container. That's why you have wells.
+        To give a simple, but nice inset effect, you can use our component called well.
         Simply add the <code>.well</code> class to get the nice style below:
     </p>
 
