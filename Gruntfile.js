@@ -14,11 +14,7 @@ module.exports = function( grunt ) {
 
 			// Allows us to recompile our docs whenever we change something in mixins/variables files
 			less: {
-				files: [
-					"assets/**/*.less",
-					"frontkit/styles/variables.less",
-					"frontkit/styles/mixins.less"
-				],
+				files: [ "assets/**/*.less" ],
 				tasks: [ "less" ]
 			}
 		},
