@@ -12,6 +12,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#components-panels">
+                        Panels
+                        <i class="icon icon-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
                     <a href="#components-wells">
                         Wells
                         <i class="icon icon-chevron-right"></i>
@@ -29,6 +35,7 @@
             </div>
 
             {% include "components/hero-unit.swig" %}
+            {% include "components/panels.swig" %}
             {% include "components/wells.swig" %}
         </div>
     </div>
