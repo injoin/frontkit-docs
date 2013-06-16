@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width">
 
         {# Styles #}
-        <link rel="stylesheet" href="frontkit/dist/frontkit.css">
+        <link rel="stylesheet" href="assets/styles/frontkit.css">
         <link rel="stylesheet" href="assets/styles/docs.css">
         <link rel="stylesheet" href="assets/vendor/highlight.css">
     </head>

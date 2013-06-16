@@ -7,7 +7,7 @@
         <!-- <![endif]-->
 
         <script src="assets/vendor/holder.js"></script>
-        <script src="frontkit/dist/frontkit.js"></script>
+        <script src="assets/scripts/frontkit.js"></script>
         <script src="assets/scripts/docs.js"></script>
     </body>
 </html>
