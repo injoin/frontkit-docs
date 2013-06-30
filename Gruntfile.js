@@ -5,7 +5,7 @@ module.exports = function( grunt ) {
         watch: {
             submodule: {
                 files: [ "frontkit/styles/*.less", "frontkit/scripts/*.js" ],
-                tasks: [ "hub" ]
+                tasks: [ "hub", "copy" ]
             },
             docs: {
                 files: [ "templates/**/*.swig", "data/*.json" ],
@@ -77,12 +77,12 @@ module.exports = function( grunt ) {
         }
     });
 
-    grunt.loadNpmTasks("grunt-hub");
-    grunt.loadNpmTasks("grunt-swig");
-    grunt.loadNpmTasks("grunt-contrib-copy");
-    grunt.loadNpmTasks("grunt-contrib-less");
-    grunt.loadNpmTasks("grunt-contrib-clean");
-    grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks( "grunt-hub" );
+    grunt.loadNpmTasks( "grunt-swig" );
+    grunt.loadNpmTasks( "grunt-contrib-copy" );
+    grunt.loadNpmTasks( "grunt-contrib-less" );
+    grunt.loadNpmTasks( "grunt-contrib-clean" );
+    grunt.loadNpmTasks( "grunt-contrib-watch" );
 
     grunt.registerTask( "html", [ "clean:html-pre", "swig" ] );
     grunt.registerTask( "default", [ "hub", "copy", "less", "html" ] );
