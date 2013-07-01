@@ -221,9 +221,10 @@
                     <input type="text" class="has-warning">
                 </div>
 
-                <div class="control-group">
+                <div class="control-group has-error">
                     <label>Input with error</label>
-                    <input type="text" class="has-error">
+                    <input type="text">
+                    <p class="input-help">I'm a error message!</p>
                 </div>
 
                 <div class="control-group">
@@ -282,6 +283,23 @@
         <button class="btn btn-default"><i class="icon icon-search"></i></button>
     </div>
 </div>
+{% endhighlight %}
+    </section>
+
+    <hr>
+
+    <!-- Input help text -->
+    <section id="css-forms-help">
+        <h4>Help Text</h4>
+        <p>Block level help text for your forms.</p>
+
+        <div class="docs-example">
+            <input type="text">
+            <p class="input-help">This field is required and only accepts phone numbers.</p>
+        </div>
+{% highlight xml %}
+<input class="text">
+<p class="input-help">This field is required and only accepts phone numbers.</p>
 {% endhighlight %}
     </section>
 </article>
