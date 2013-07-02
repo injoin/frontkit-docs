@@ -6,6 +6,12 @@
             <ul class="nav nav-list well">
                 <li class="nav-header">Components</li>
                 <li>
+                    <a href="#components-alerts">
+                        Alerts
+                        <i class="icon icon-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
                     <a href="#components-hero-unit">
                         Hero Unit
                         <i class="icon icon-chevron-right"></i>
@@ -34,6 +40,7 @@
                 <h2>Components</h2>
             </div>
 
+            {% include "components/alerts.swig" %}
             {% include "components/hero-unit.swig" %}
             {% include "components/panels.swig" %}
             {% include "components/wells.swig" %}
