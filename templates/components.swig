@@ -18,6 +18,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#components-navbar">
+                        Navbar
+                        <i class="icon icon-chevron-right"></i>
+                    </a>
+                </li>
+                <li>
                     <a href="#components-panels">
                         Panels
                         <i class="icon icon-chevron-right"></i>
@@ -42,6 +48,7 @@
 
             {% include "components/alerts.swig" %}
             {% include "components/hero-unit.swig" %}
+            {% include "components/navbar.swig" %}
             {% include "components/panels.swig" %}
             {% include "components/wells.swig" %}
         </div>
