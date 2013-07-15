@@ -13,7 +13,7 @@
     </div>
 
     {# Main contents #}
-    <div class="container">
+    <div class="container" id="main">
         {% block page %}{% endblock %}
     </div>
 
