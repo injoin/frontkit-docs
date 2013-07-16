@@ -69,10 +69,7 @@ module.exports = function( grunt ) {
                 src: [ "*.swig" ],
                 dest: "./",
                 generateSitemap: false,
-                generateRobotstxt: false,
-
-                // Templates data
-                menus: grunt.file.readJSON( "data/menus.json" )
+                generateRobotstxt: false
             }
         }
     });

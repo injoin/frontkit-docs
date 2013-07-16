@@ -12,9 +12,39 @@
         </div>
     </div>
 
-    {# Main contents #}
-    <div class="container" id="main">
-        {% block page %}{% endblock %}
+    <div class="container">
+        <div class="row">
+            {# Navigation #}
+            <div  class="col col-span2 docs-sidebar">
+                <nav id="nav" role="navigation"></nav>
+            </div>
+
+            {# Main Content #}
+            <div id="main" role="main" class="col col-span10 docs-content">
+                <div class="doc-category" data-name="CSS">
+                    {# CSS #}
+                    {% include "css/grid.swig" %}
+                    {% include "css/type.swig" %}
+                    {% include "css/code.swig" %}
+                    {% include "css/lists.swig" %}
+                    {% include "css/tables.swig" %}
+                    {% include "css/forms.swig" %}
+                    {% include "css/buttons.swig" %}
+                    {% include "css/images.swig" %}
+                </div>
+
+                <div class="doc-category" data-name="Components">
+                    {# Components #}
+                    {% include "components/alerts.swig" %}
+                    {% include "components/hero-unit.swig" %}
+                    {% include "components/labels.swig" %}
+                    {% include "components/nav.swig" %}
+                    {% include "components/navbar.swig" %}
+                    {% include "components/panels.swig" %}
+                    {% include "components/wells.swig" %}
+                </div>
+            </div>
+        </div>
     </div>
 
     {# Footer #}
