@@ -1,8 +1,8 @@
 <!-- Typography-->
 <article id="css-type">
-    <div class="page-header">
+    <header class="page-header">
         <h3>Typography</h3>
-    </div>
+    </header>
 
     <!-- Paragraphs-->
     <section id="css-type-paragraphs">
@@ -61,25 +61,25 @@
     <section id="css-type-emphasis">
         <h4>Emphasis</h4>
         <p>For emphasizing your text, some default HTML tags for you.</p>
-        
+
         <h5>Bold</h5>
         <div class="docs-example"><strong>Please note</strong> that this is very important.</div>
 {% highlight xml %}
 <strong>Please note</strong> that this is very important.
 {% endhighlight %}
-        
+
         <h5>Italics</h5>
         <div class="docs-example"><em>Mama mia</em>, that food was awesome!</div>
 {% highlight xml %}
 <em>Mama mia</em>, that food was awesome!
 {% endhighlight %}
-        
+
         <h5>Small text</h5>
         <div class="docs-example"><small>Don't waste your time caring about me :)</small></div>
 {% highlight xml %}
 <small>Don't waste your time caring about me :)</small>
 {% endhighlight %}
-        
+
     </section>
 
     <hr>
@@ -147,7 +147,7 @@ JavaScript is abbreviated to <abbr title="JavaScript">JS</abbr>.
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 </blockquote>
 {% endhighlight %}
-        
+
         <p>If you also need to identify the source, add an <code>&lt;small&gt;</code> tag, while wrapping the source work with <code>&lt;cite&gt;</code>:</p>
         <div class="docs-example">
             <blockquote>
