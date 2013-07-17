@@ -1,29 +1,66 @@
 (function( $ ) {
     "use strict";
 
-    var $testFrame, $window, $topNavbar;
+    var $nav = $( "#nav" );
+    var $articles = $( "#main article" );
 
-    $( document ).ready(function() {
-        var $sidebar = $( ".docs-sidebar" ).children();
-        $sidebar.width( $sidebar.width() ).affix({
-            offset: 45,
-            position: 60,
-            activate: function() {
+    $articles.hide();
 
-            }
-        });
-
-        $window = $( window );
-        $testFrame = $( "#test-frame" );
-        $topNavbar = $( "#top-navbar" );
-
-        $window
-            .resize( resizeTestFrame )
-            .triggerHandler( "resize" );
+    // Make the navigation affixed
+    $nav.width( $nav.width() ).affix({
+        offset: 45,
+        position: 60,
+        activate: function( e, data ) {
+            $articles.children( ".page-header" ).css( "padding-top", data.active ? 45 : 0 );
+        }
     });
 
-    function resizeTestFrame() {
-        $testFrame.height( $window.innerHeight() - $topNavbar.outerHeight() );
-    }
+    // Build navigation menu
+    $( ".doc-category" ).each(function() {
+        var $this = $( this );
+        var name = $this.data( "name" );
+        var $list = $( "<ul />" ).addClass( "nav nav-list" );
+
+        $( "<li />" ).addClass( "nav-header" ).text( name ).appendTo( $list );
+
+        $this.children( "article" ).each(function() {
+            var articleName = $.trim( $( "> .page-header", this ).text() );
+            var $li = $( "<li />" ).appendTo( $list );
+
+            $( "<a />" ).attr( "href", "#" + this.id )
+                        .text( articleName )
+                        .data( "articleId", this.id )
+                        .appendTo( $li );
+        });
+
+        $list.appendTo( $nav );
+    });
+
+    // Flash each article on click in its sidebar link
+    $nav.on( "click", "a", function( e ) {
+        var $this = $( this );
+        var articleId = $this.data( "articleId" );
+        var $visibleArticle = $articles.filter( ":visible" );
+
+        e.stopPropagation();
+        e.preventDefault();
+
+        // Don't go to already active item
+        if ( $visibleArticle.length ) {
+            if ( $visibleArticle.get( 0 ).id === articleId ) {
+                $( document ).scrollTop( $visibleArticle.offset().top );
+                return;
+            }
+
+            $nav.find( "li.active" ).removeClass( "active" );
+            $visibleArticle.fadeOut( 200, function() {
+                $this.parents( "li" ).addClass( "active" );
+                $( "#" + articleId ).fadeIn( 200 );
+            });
+        } else {
+            $this.parents( "li" ).addClass( "active" );
+            $( "#" + articleId ).show();
+        }
+    }).find( "li a" ).first().trigger( "click" );
 
 })( jQuery );

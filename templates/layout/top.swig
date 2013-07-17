@@ -16,8 +16,7 @@
             <a href="index.html" class="navbar-brand">Frontkit</a>
 
             <ul class="nav navbar-nav">
-                <li><a href="css.html">CSS</a></li>
-                <li><a href="components.html">Components</a></li>
+                <li><a href="docs.html">Docs</a></li>
                 <li><a href="unit-tests.html">Unit Tests</a></li>
             </ul>
         </div>
