@@ -1,9 +1,16 @@
 (function( $ ) {
     "use strict";
 
+    // Variables
+    // -----------------------------------------------
+    var $window = $( window );
     var $nav = $( "#nav" );
     var $articles = $( "#main article" );
+    var $testFrame = $( "#test-frame" );
+    var $navbar = $( "#top-navbar" );
 
+    // Page adjustments
+    // -----------------------------------------------
     $articles.hide();
 
     // Make the navigation affixed
@@ -36,6 +43,8 @@
         $list.appendTo( $nav );
     });
 
+    // Events
+    // -----------------------------------------------
     // Flash each article on click in its sidebar link
     $nav.on( "click", "a", function( e ) {
         var $this = $( this );
@@ -62,5 +71,12 @@
             $( "#" + articleId ).show();
         }
     }).find( "li a" ).first().trigger( "click" );
+
+    // If the test frame is available, let's resize it to match the whole page size
+    if ( $testFrame.length ) {
+        $window.resize(function() {
+            $testFrame.height( $window.innerHeight() - $navbar.outerHeight() );
+        }).triggerHandler( "resize" );
+    }
 
 })( jQuery );
