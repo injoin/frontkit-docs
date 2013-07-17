@@ -1,17 +1,18 @@
 {
-	"name": "injoin-frontend-docs",
-	"version": "0.0.0",
-	"repository": {
-		"type": "git",
-		"url":  "https://github.com/injoin/frontkit-docs.git"
-	},
-	"devDependencies": {
-		"grunt":                "~0.4.0",
-		"grunt-contrib-less":   "*",
-		"grunt-contrib-watch":  "*",
-		"grunt-contrib-clean":  "*",
-		"grunt-swig":           "*",
-		"grunt-hub":            "*",
-        "highlight.js":         "*"
-	}
+    "name": "injoin-frontkit-docs",
+    "version": "0.0.0",
+    "repository": {
+        "type": "git",
+        "url":  "https://github.com/injoin/frontkit-docs.git"
+    },
+    "devDependencies": {
+        "grunt":                "0.4.x",
+        "grunt-contrib-less":   "0.6.x",
+        "grunt-contrib-watch":  "0.4.x",
+        "grunt-contrib-clean":  "0.5.x",
+        "grunt-contrib-copy":   "0.4.x",
+        "grunt-swig":           "~0.0.12",
+        "grunt-hub":            "0.5.x",
+        "highlight.js":         "7.3.x"
+    }
 }
