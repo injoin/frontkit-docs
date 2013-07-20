@@ -58,7 +58,10 @@
         <div class="docs-example">
             <div class="alert alert-warning alert-large">
                 <button class="close">&times;</button>
-                <h4>Attention!</h4>
+                <h4>
+                    <i class="icon icon-warning-sign"></i>
+                    Attention!
+                </h4>
                 <p>It's been more than 2 months since the last update check.</p>
             </div>
         </div>

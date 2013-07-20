@@ -14,12 +14,16 @@
     $articles.hide();
 
     // Make the navigation affixed
-    $nav.width( $nav.width() ).affix({
+    $nav.affix({
         offset: 45,
         position: 60,
         activate: function( e, data ) {
             $articles.children( ".page-header" ).css( "padding-top", data.active ? 45 : 0 );
         }
+    });
+
+    $( "#collapse" ).collapse({
+        element: $navbar.children( ".nav" )
     });
 
     // Build navigation menu
@@ -73,10 +77,9 @@
     }).find( "li a" ).first().trigger( "click" );
 
     // If the test frame is available, let's resize it to match the whole page size
-    if ( $testFrame.length ) {
-        $window.resize(function() {
-            $testFrame.height( $window.innerHeight() - $navbar.outerHeight() );
-        }).triggerHandler( "resize" );
-    }
+    $window.resize(function() {
+        $testFrame.height( $window.innerHeight() - $navbar.outerHeight() );
+        $nav.width( $nav.parent().width() );
+    }).triggerHandler( "resize" );
 
 })( jQuery );

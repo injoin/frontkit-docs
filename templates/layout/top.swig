@@ -13,8 +13,13 @@
     <body class="docs">
         {# Navbar #}
         <div id="top-navbar" class="navbar navbar-fixed-top">
-            <a href="index.html" class="navbar-brand">Frontkit</a>
+            <button id="collapse" class="btn btn-default collapse-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
+            <a href="index.html" class="navbar-brand">Frontkit</a>
             <ul class="nav navbar-nav">
                 <li><a href="docs.html">Docs</a></li>
                 <li><a href="unit-tests.html">Unit Tests</a></li>
