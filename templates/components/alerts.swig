@@ -1,5 +1,5 @@
 <!-- Alerts -->
-<article id="components-alerts">
+<article id="components-alerts" class="docs-article">
     <header class="page-header">
         <h3>Alerts</h3>
     </header>

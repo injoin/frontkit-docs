@@ -1,5 +1,5 @@
 <!-- Lists-->
-<article id="css-lists">
+<article id="css-lists" class="docs-article">
     <header class="page-header">
         <h3>Lists</h3>
     </header>

@@ -1,5 +1,5 @@
 <!-- Panels -->
-<article id="components-panels">
+<article id="components-panels" class="docs-article">
     <header class="page-header">
         <h3>Panels</h3>
     </header>

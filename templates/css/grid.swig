@@ -1,5 +1,5 @@
 <!-- Grid System-->
-<article id="css-grid">
+<article id="css-grid" class="docs-article">
     <header class="page-header">
         <h3>Grid System</h3>
     </header>

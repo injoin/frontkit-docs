@@ -1,5 +1,5 @@
 <!-- Typography-->
-<article id="css-type">
+<article id="css-type" class="docs-article">
     <header class="page-header">
         <h3>Typography</h3>
     </header>

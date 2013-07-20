@@ -1,5 +1,5 @@
 <!-- Code-->
-<article id="css-code">
+<article id="css-code" class="docs-article">
     <header class="page-header">
         <h3>Code</h3>
     </header>

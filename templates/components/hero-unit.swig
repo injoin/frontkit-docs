@@ -1,5 +1,5 @@
 <!-- Hero Unit -->
-<article id="components-hero-unit">
+<article id="components-hero-unit" class="docs-article">
     <header class="page-header">
         <h3>Hero Unit</h3>
     </header>

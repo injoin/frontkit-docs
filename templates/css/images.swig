@@ -1,11 +1,11 @@
 <!-- Images -->
-<article id="css-images">
+<article id="css-images" class="docs-article">
     <header class="page-header">
         <h3>Images</h3>
     </header>
-    
+
     <p>Easy style some <code>&lt;img&gt;</code> tags with a few classes.</p>
-    
+
     <div class="docs-example">
         <img data-src="holder.js/150x150" class="img-rounded">
         <img data-src="holder.js/150x150" class="img-circle">

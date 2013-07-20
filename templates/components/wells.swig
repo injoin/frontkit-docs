@@ -1,5 +1,5 @@
 <!-- Wells -->
-<article id="components-wells">
+<article id="components-wells" class="docs-article">
     <header class="page-header">
         <h3>Wells</h3>
     </header>

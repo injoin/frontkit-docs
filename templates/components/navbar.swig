@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<article id="components-navbar">
+<article id="components-navbar" class="docs-article">
     <header class="page-header">
         <h3>Navbar</h3>
     </header>

@@ -1,5 +1,5 @@
 <!-- Tables-->
-<article id="css-tables">
+<article id="css-tables" class="docs-article">
     <header class="page-header">
         <h3>Tables</h3>
     </header>

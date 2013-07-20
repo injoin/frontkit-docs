@@ -1,5 +1,5 @@
 <!-- Labels -->
-<article id="components-labels">
+<article id="components-labels" class="docs-article">
     <header class="page-header">
         <h3>Labels</h3>
     </header>

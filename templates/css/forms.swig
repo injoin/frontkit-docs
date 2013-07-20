@@ -1,5 +1,5 @@
 <!-- Forms-->
-<article id="css-forms">
+<article id="css-forms" class="docs-article">
     <header class="page-header">
         <h3>Forms</h3>
     </header>

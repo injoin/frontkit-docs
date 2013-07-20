@@ -1,5 +1,5 @@
 <!-- Buttons-->
-<article id="css-buttons">
+<article id="css-buttons" class="docs-article">
     <header class="page-header">
         <h3>Buttons</h3>
     </header>
