@@ -2,14 +2,21 @@ module.exports = function( grunt ) {
     "use strict";
 
     grunt.initConfig({
+        // Watch
+        // ------------------------------------------------------------
         watch: {
-            submodule: {
-                files: [ "frontkit/styles/*.less", "frontkit/scripts/*.js" ],
-                tasks: [ "hub", "copy" ]
+            submoduleStyles: {
+                files: [ "frontkit/styles/*.less" ],
+                tasks: [ "hub:styles", "copy:styles" ]
             },
+            submoduleScripts: {
+                files: [ "frontkit/scripts/*.js" ],
+                tasks: [ "hub:scripts", "copy:scripts" ]
+            },
+
             docs: {
-                files: [ "templates/**/*.swig", "data/*.json" ],
-                tasks: [ "html" ]
+                files: [ "templates/**/*.swig" ],
+                tasks: [ "swig" ]
             },
 
             // Allows us to recompile our docs whenever we change something in mixins/variables files
@@ -18,47 +25,47 @@ module.exports = function( grunt ) {
                 tasks: [ "less" ]
             }
         },
+
+        // Submodule Tasks
+        // ------------------------------------------------------------
         hub: {
             submodule: {
                 src: "frontkit/Gruntfile.js"
+            },
+            styles: {
+                src: "<%= hub.submodule.src %>",
+                tasks: [ "styles" ]
+            },
+            scripts: {
+                src: "<%= hub.submodule.src %>",
+                tasks: [ "scripts" ]
             }
         },
-        clean: {
-            // Delete previously created HTML files
-            "html-pre": [ "*.html" ]
-        },
+
+        // Copy
+        // ------------------------------------------------------------
         copy: {
-            dist: {
-                files: [
-                    // Styles
-                    {
-                        src: "frontkit/dist/frontkit.css",
-                        dest: "assets/styles/frontkit.css"
-                    },
-
-                    // Scripts
-                    {
-                        src: "frontkit/dist/frontkit.js",
-                        dest: "assets/scripts/frontkit.js"
-                    },
-
-                    // Fonts
-                    {
-                        src: "frontkit/fonts/*",
-                        dest: "assets/fonts/",
-                        flatten: true,
-                        expand: true
-                    }
-                ]
+            styles: {
+                files: [{
+                    src: "frontkit/dist/frontkit.css",
+                    dest: "assets/styles/frontkit.css"
+                }, {
+                    src: "frontkit/fonts/*",
+                    dest: "assets/fonts/",
+                    flatten: true,
+                    expand: true
+                }]
+            },
+            scripts: {
+                files: [{
+                    src: "frontkit/dist/frontkit.js",
+                    dest: "assets/scripts/frontkit.js"
+                }]
             }
         },
-        less: {
-            docs: {
-                files: {
-                    "assets/styles/docs.css": "assets/styles/docs.less"
-                }
-            }
-        },
+
+        // HTML
+        // ------------------------------------------------------------
         swig: {
             docs: {
                 init: {
@@ -71,16 +78,25 @@ module.exports = function( grunt ) {
                 generateSitemap: false,
                 generateRobotstxt: false
             }
+        },
+
+        // Styles
+        // ------------------------------------------------------------
+        less: {
+            docs: {
+                files: {
+                    "assets/styles/docs.css": "assets/styles/docs.less"
+                }
+            }
         }
     });
 
+    // Load all deps...
     grunt.loadNpmTasks( "grunt-hub" );
     grunt.loadNpmTasks( "grunt-swig" );
     grunt.loadNpmTasks( "grunt-contrib-copy" );
     grunt.loadNpmTasks( "grunt-contrib-less" );
-    grunt.loadNpmTasks( "grunt-contrib-clean" );
     grunt.loadNpmTasks( "grunt-contrib-watch" );
 
-    grunt.registerTask( "html", [ "clean:html-pre", "swig" ] );
-    grunt.registerTask( "default", [ "hub", "copy", "less", "html" ] );
+    grunt.registerTask( "default", [ "hub:submodule", "copy", "less", "swig" ]);
 };
