@@ -9,7 +9,6 @@
         "grunt":                "0.4.x",
         "grunt-contrib-less":   "0.6.x",
         "grunt-contrib-watch":  "0.4.x",
-        "grunt-contrib-clean":  "0.5.x",
         "grunt-contrib-copy":   "0.4.x",
         "grunt-swig":           "~0.0.12",
         "grunt-hub":            "0.5.x",
