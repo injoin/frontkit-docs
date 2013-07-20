@@ -1,4 +1,8 @@
 .idea/
 node_modules/
+
+# Those files are generated or copied from the Frontkit submodule
 *.html
 assets/styles/*.css
+assets/scripts/*.js
+assets/fonts/
