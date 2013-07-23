@@ -12,6 +12,18 @@
     <div class="docs-example">
         <div class="navbar">
             <a href="#" class="navbar-brand">Project Name</a>
+
+            <form class="navbar-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Search..." />
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <i class="icon icon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
             <ul class="nav navbar-nav pull-end">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Products</a></li>
@@ -22,6 +34,16 @@
 {% highlight xml %}
 <div class="navbar">
     <a href="#" class="navbar-brand">Project Name</a>
+    <form class="navbar-form">
+        <div class="input-group">
+            <input type="text" placeholder="Search..." />
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                    <i class="icon icon-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
     <ul class="nav navbar-nav pull-end">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">Products</a></li>
