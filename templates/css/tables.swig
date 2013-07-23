@@ -12,10 +12,10 @@
         <div class="docs-example">
             <table class="table">
                 <colgroup>
-                    <col class="col-span1">
-                    <col class="col-span3">
-                    <col class="col-span4">
-                    <col class="col-span4">
+                    <col class="small-1">
+                    <col class="small-3">
+                    <col class="small-4">
+                    <col class="small-4">
                 </colgroup>
                 <thead>
                 <tr>
@@ -61,10 +61,10 @@
             <div class="docs-example">
                 <table class="table table-striped">
                     <colgroup>
-                        <col class="col-span1">
-                        <col class="col-span3">
-                        <col class="col-span4">
-                        <col class="col-span4">
+                        <col class="small-1">
+                        <col class="small-3">
+                        <col class="small-4">
+                        <col class="small-4">
                     </colgroup>
                     <thead>
                     <tr>
@@ -103,10 +103,10 @@
             <div class="docs-example">
                 <table class="table table-bordered">
                     <colgroup>
-                        <col class="col-span1">
-                        <col class="col-span3">
-                        <col class="col-span4">
-                        <col class="col-span4">
+                        <col class="small-1">
+                        <col class="small-3">
+                        <col class="small-4">
+                        <col class="small-4">
                     </colgroup>
                     <thead>
                     <tr>
@@ -145,10 +145,10 @@
             <div class="docs-example">
                 <table class="table table-hover">
                     <colgroup>
-                        <col class="col-span1">
-                        <col class="col-span3">
-                        <col class="col-span4">
-                        <col class="col-span4">
+                        <col class="small-1">
+                        <col class="small-3">
+                        <col class="small-4">
+                        <col class="small-4">
                     </colgroup>
                     <thead>
                     <tr>

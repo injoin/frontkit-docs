@@ -82,20 +82,20 @@
         <h5>Inputs</h5>
         <p>The most common form control, text-based input field. It includes support for all HTML5 types:</p>
         <ul class="list-unstyled row">
-            <li class="col col-span3"><i class="icon icon-ok"></i> text</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> password</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> datetime</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> datetime-local</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> date</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> month</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> week</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> time</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> number</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> email</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> url</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> search</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> tel</li>
-            <li class="col col-span3"><i class="icon icon-ok"></i> color</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> text</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> password</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> datetime</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> datetime-local</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> date</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> month</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> week</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> time</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> number</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> email</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> url</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> search</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> tel</li>
+            <li class="col small-3"><i class="icon icon-ok"></i> color</li>
         </ul>
 
         <div class="docs-example">
@@ -280,12 +280,12 @@
         <p>Whenever you want to extend your form controls, there's the <code>.input-group</code> class!</p>
 
         <div class="docs-example">
-            <div class="input-group col col-span12">
+            <div class="input-group col small-12">
                 <div class="input-group-addon">@</div>
                 <input type="text" placeholder="E-mail">
             </div>
 
-            <div class="input-group col col-span12">
+            <div class="input-group col small-12">
                 <input type="search" placeholder="Search">
                 <div class="input-group-btn">
                     <button class="btn btn-default"><i class="icon icon-search"></i></button>
@@ -293,12 +293,12 @@
             </div>
         </div>
 {% highlight xml %}
-<div class="input-group col col-span12">
+<div class="input-group col small-12">
     <div class="input-group-addon">@</div>
     <input type="text" placeholder="E-mail">
 </div>
 
-<div class="input-group col col-span12">
+<div class="input-group col small-12">
     <input type="search" placeholder="Search">
     <div class="input-group-btn">
         <button class="btn btn-default"><i class="icon icon-search"></i></button>

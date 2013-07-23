@@ -15,12 +15,12 @@
     <div class="container">
         <div class="row">
             {# Navigation #}
-            <div  class="col col-span2 docs-sidebar">
+            <div  class="col large-3 docs-sidebar">
                 <nav id="nav" role="navigation"></nav>
             </div>
 
             {# Main Content #}
-            <div id="main" role="main" class="col col-span10 docs-content">
+            <div id="main" role="main" class="col large-9 docs-content">
                 <div class="doc-category" data-name="CSS">
                     {# CSS #}
                     {% include "css/grid.swig" %}

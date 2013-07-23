@@ -11,9 +11,9 @@
 
         <table class="table">
             <colgroup>
-                <col class="col-span2">
-                <col class="col-span2">
-                <col class="col-span8">
+                <col class="small-2">
+                <col class="small-3 large-2">
+                <col class="small-7 large-8">
             </colgroup>
             <thead>
             <tr>

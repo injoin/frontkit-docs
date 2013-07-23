@@ -11,8 +11,8 @@
 
     <table class="table">
         <colgroup>
-            <col class="col-span2">
-            <col class="col-span10">
+            <col class="small-2">
+            <col class="small-10">
         </colgroup>
         <thead>
             <tr>
