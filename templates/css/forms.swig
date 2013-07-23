@@ -253,6 +253,27 @@
 
     <hr>
 
+    <!-- Input Sizing -->
+    <section id="css-forms-sizing">
+        <h4>Input Sizing</h4>
+        <p>
+            Ever needed bigger or smaller inputs?
+            There you go: the classes <code>.input-small</code> and <code>.input-large</code> were made to you.
+        </p>
+
+        <div class="docs-example">
+            <input type="text" class="input-small" placeholder="Small Input">
+            <textarea class="input-small" placeholder="Small Textarea"></textarea>
+
+            <br>
+
+            <input type="text" class="input-large" placeholder="Large Input">
+            <textarea class="input-large" placeholder="Large Textarea"></textarea>
+        </div>
+    </section>
+
+    <hr>
+
     <!-- Input groups-->
     <section id="css-forms-extending">
         <h4>Input Groups</h4>
