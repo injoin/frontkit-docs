@@ -1,6 +1,8 @@
 module.exports = function( grunt ) {
     "use strict";
 
+    var pkg = grunt.file.readJSON( "package.json" );
+
     grunt.initConfig({
         // Watch
         // ------------------------------------------------------------
@@ -76,7 +78,9 @@ module.exports = function( grunt ) {
                 src: [ "*.swig" ],
                 dest: "./",
                 generateSitemap: false,
-                generateRobotstxt: false
+                generateRobotstxt: false,
+
+                pkg: pkg
             }
         },
 

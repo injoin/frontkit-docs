@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}Frontkit{% endblock %}</title>
+        <title>{{ pkg.title }}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
 
@@ -19,9 +19,9 @@
                 <span class="bar"></span>
             </button>
 
-            <a href="index.html" class="navbar-brand">Frontkit</a>
+            <a href="index.html" class="navbar-brand">{{ pkg.title }}</a>
             <ul class="nav navbar-nav">
-                <li><a href="docs.html">Docs</a></li>
-                <li><a href="unit-tests.html">Unit Tests</a></li>
+                <li class="{{ docs }}"><a href="docs.html">Docs</a></li>
+                <li class="{{ tests }}"><a href="unit-tests.html">Unit Tests</a></li>
             </ul>
         </div>

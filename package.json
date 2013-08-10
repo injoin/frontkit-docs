@@ -1,6 +1,8 @@
 {
     "name": "injoin-frontkit-docs",
-    "version": "0.0.0",
+    "title": "Frontkit",
+    "description": "The InJoin frontend development toolkit.",
+    "version": "0.0.1",
     "repository": {
         "type": "git",
         "url":  "https://github.com/injoin/frontkit-docs.git"
