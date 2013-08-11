@@ -33,56 +33,97 @@ $( ".element" ).myPlugin( "sayHello" );
             When you define a new widget with <code>$.frontkit()</code>, you're defining the prototype
             for a new class that will extend from the Frontkit's base class for widgets.
             This will give you much options for easy widget development.<br>
-            For example, every item in the following list can be defined in your widget API:
         </p>
 
-        <div class="panel api">
-            <ul class="list-unstyled api-arg-list">
-                <li>
-                    <div>
-                        <strong>_initialize()</strong>
-                    </div>
-                    <p>Type: <code>Function</code></p>
-                    <p>
-                        A initialization function. Runs after the widget options have been set and before
-                        the <code>created</code> event is triggered.
-                    </p>
-                </li>
-                <li>
-                    <div>
-                        <strong>_destroy()</strong>
-                    </div>
-                    <p>Type: <code>Function</code></p>
-                    <p>
-                        A destruction function. When you call <code>myPlugin( "destroy" )</code>, this
-                        function will be called before any data or events are detached from the element.
-                    </p>
-                </li>
-                <li>
-                    <div>
-                        <strong>options</strong>
-                    </div>
-                    <p>Type: <code>Object</code></p>
-                    <p>
-                        An special object in the API which can go through the <strong>_setOption</strong>
-                        method for pre-formatting its value.<br>
-                        May contain anything you need/want inside your object.
-                    </p>
-                </li>
-                <li>
-                    <div>
-                        <strong>_setOption( name, value )</strong>
-                    </div>
-                    <p>Type: <code>Function</code></p>
-                    <p>
-                        A function which gets called whenever an option is set. You may validate
-                        the value, call some event or whatever you want. When done, call
-                        <code>this.super( name, value )</code> (inside this function) to normally
-                        set the option value.
-                    </p>
-                    <p>If <code>_setOption</code> function is not defined, options will be set without any preprocess.</p>
-                </li>
-            </ul>
+        <div>
+            <h5>Special Cased API properties/methods</h5>
+            <p>Every item in the following list is optional, however they do play special roles in the widget.</p>
+
+            <div class="panel api">
+                <ul class="list-unstyled api-arg-list">
+                    <li>
+                        <div>
+                            <strong>_initialize()</strong>
+                        </div>
+                        <p>Type: <code>Function</code></p>
+                        <p>
+                            A initialization function. Runs after the widget options have been set and before
+                            the <code>created</code> event is triggered.
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>_destroy()</strong>
+                        </div>
+                        <p>Type: <code>Function</code></p>
+                        <p>
+                            A destruction function. When you call <code>myPlugin( "destroy" )</code>, this
+                            function will be called before any data or events are detached from the element.
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>options</strong>
+                        </div>
+                        <p>Type: <code>Object</code></p>
+                        <p>
+                            An special object in the API which can go through the <strong>_setOption</strong>
+                            method for pre-formatting its value.<br>
+                            May contain anything you need/want inside your object.
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>_setOption( name, value )</strong>
+                        </div>
+                        <p>Type: <code>Function</code></p>
+                        <p>
+                            A function which gets called whenever an option is set. You may validate
+                            the value, call some event or whatever you want. When done, call
+                            <code>this.super( name, value )</code> (inside this function) to normally
+                            set the option value.
+                        </p>
+                        <p>If <code>_setOption</code> function is not defined, options will be set without any preprocess.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h5>API Helper methods</h5>
+            <p>
+                The following methods are all already defined in the API, and they are helpers for
+                some common tasks in a DOM environment. Important: <strong>do not overwrite them</strong>!
+            </p>
+
+            <div class="panel api">
+                <ul class="list-unstyled api-arg-list">
+                    <li>
+                        <div>
+                            <strong>_trigger( type[, event][, data] )</strong>
+                        </div>
+                        <p>Type: <code>Function</code></p>
+                        <p>
+                            Triggers events of type <code>widgetName + type</code>. In a widget called
+                            "myWidget", the event type could be <code>mywidgetevent</code>, for example.<br>
+                            It's worth to note also that it'll be triggered on the element where the widget
+                            was instantiated, so you could do the following, for example:
+                        </p>
+{% highlight javascript %}
+$( ".element" ).bind( "mywidgetevenet", handler );
+{% endhighlight %}
+                        <p>
+                            If there's a option named <code>type</code>, and it's a function, it'll be
+                            triggered also.
+                        </p>
+                        <p>
+                            The <code>event</code> argument is an plain object which can default some properties of
+                            the <a href="http://api.jquery.com/category/events/event-object/">$.Event()</a> object.
+                        </p>
+                        <p>Finally, the <code>data</code> is any data passed directly to the event listener.</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
