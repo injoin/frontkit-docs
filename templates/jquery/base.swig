@@ -96,31 +96,107 @@ $( ".element" ).myPlugin( "sayHello" );
                 some common tasks in a DOM environment. Important: <strong>do not overwrite them</strong>!
             </p>
 
-            <div class="panel api">
+            <div class="panel api" id="jquery-factory-widget-_on">
+                <div class="panel-header">
+                    <a href="#jquery-factory-widget-_on">_trigger( type[, event][, data] )</a>
+                </div>
+                <p>
+                    <strong>Description:</strong> Triggers a event from the widget element.
+                </p>
                 <ul class="list-unstyled api-arg-list">
                     <li>
                         <div>
-                            <strong>_trigger( type[, event][, data] )</strong>
+                            <strong>type</strong>
+                        </div>
+                        <p>Type: <code>String</code></p>
+                        <p>
+                            The type of the event. It'll be prefixed by the name of the plugin; i.e.
+                            if "click" was passed, then the event type will be "mywidgetclick".
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>event</strong>
+                        </div>
+                        <p>Type: <code>Object</code></p>
+                        <p>
+                            An plain object which can default some properties of the
+                            <a href="http://api.jquery.com/category/events/event-object/">$.Event</a> object.
+                        </p>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>data</strong>
+                        </div>
+                        <p>Type: <code>Any</code></p>
+                        <p>Any data which will be directly passed to the event listener.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel api">
+                <div class="panel-header">
+                    _on( event[, selector], handler( eventObject ) )
+                </div>
+
+                <p>
+                    <strong>Description:</strong>
+                    Attach an event handler function for one or more events to the widget element,
+                    using the delegation provided by jQuery <a href="http://api.jquery.com/on/">on</a>.
+                </p>
+
+                <ul class="list-unstyled api-arg-list">
+                    <li>
+                        <div>
+                            <strong>event</strong>
+                        </div>
+                        <p>Type: <code>String</code></p>
+                        <p>The name of the event that will be bound.</p>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>selector</strong>
+                        </div>
+                        <p>Type: <code>String</code></p>
+                        <p>An optional selector to delegate the event to.</p>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>handler( eventObject )</strong>
                         </div>
                         <p>Type: <code>Function</code></p>
                         <p>
-                            Triggers events of type <code>widgetName + type</code>. In a widget called
-                            "myWidget", the event type could be <code>mywidgetevent</code>, for example.<br>
-                            It's worth to note also that it'll be triggered on the element where the widget
-                            was instantiated, so you could do the following, for example:
+                            The event handler. Takes by default only the
+                            <a href="http://api.jquery.com/category/events/event-object/">$.Event</a> object.
                         </p>
-{% highlight javascript %}
-$( ".element" ).bind( "mywidgetevenet", handler );
-{% endhighlight %}
-                        <p>
-                            If there's a option named <code>type</code>, and it's a function, it'll be
-                            triggered also.
-                        </p>
-                        <p>
-                            The <code>event</code> argument is an plain object which can default some properties of
-                            the <a href="http://api.jquery.com/category/events/event-object/">$.Event()</a> object.
-                        </p>
-                        <p>Finally, the <code>data</code> is any data passed directly to the event listener.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel api" id="jquery-factory-widget-_off">
+                <div class="panel-header">
+                    <a href="#jquery-factory-widget-_off">_off( event[, selector] )</a>
+                </div>
+
+                <p>
+                    <strong>Description:</strong>
+                    Detach event handlers bound using <a href="#jquery-factory-widget-_on">_on</a>.
+                </p>
+
+                <ul class="list-unstyled api-arg-list">
+                    <li>
+                        <div>
+                            <strong>event</strong>
+                        </div>
+                        <p>Type: <code>String</code></p>
+                        <p>The name of the event that will be unbound.</p>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>selector</strong>
+                        </div>
+                        <p>Type: <code>String</code></p>
+                        <p>An optional selector to undelegate events from.</p>
                     </li>
                 </ul>
             </div>
