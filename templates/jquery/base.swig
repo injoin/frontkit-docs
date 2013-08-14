@@ -103,6 +103,10 @@ $( ".element" ).myPlugin( "sayHello" );
                 <p>
                     <strong>Description:</strong> Triggers a event from the widget element.
                 </p>
+
+                <div class="api-sub-title">
+                    Arguments
+                </div>
                 <ul class="list-unstyled api-arg-list">
                     <li>
                         <div>
@@ -134,9 +138,9 @@ $( ".element" ).myPlugin( "sayHello" );
                 </ul>
             </div>
 
-            <div class="panel api">
+            <div class="panel api" id="jquery-factory-widget-_on">
                 <div class="panel-header">
-                    _on( event[, selector], handler( eventObject ) )
+                    <a href="#jquery-factory-widget-_on">_on( event[, selector], handler( eventObject ) )</a>
                 </div>
 
                 <p>
@@ -145,6 +149,9 @@ $( ".element" ).myPlugin( "sayHello" );
                     using the delegation provided by jQuery <a href="http://api.jquery.com/on/">on</a>.
                 </p>
 
+                <div class="api-sub-title">
+                    Arguments
+                </div>
                 <ul class="list-unstyled api-arg-list">
                     <li>
                         <div>
@@ -183,6 +190,9 @@ $( ".element" ).myPlugin( "sayHello" );
                     Detach event handlers bound using <a href="#jquery-factory-widget-_on">_on</a>.
                 </p>
 
+                <div class="api-sub-title">
+                    Arguments
+                </div>
                 <ul class="list-unstyled api-arg-list">
                     <li>
                         <div>
@@ -206,7 +216,7 @@ $( ".element" ).myPlugin( "sayHello" );
     <hr>
 
     <section id="jquery-factory-api">
-        <h4>API</h4>
+        <h4>Widget Factory API</h4>
         <div class="panel api" id="jquery-factory-frontkit">
             <div class="panel-header">
                 <a href="#jquery-factory-frontkit">$.frontkit( widgetName[, widgetAPI] )</a>
@@ -217,6 +227,9 @@ $( ".element" ).myPlugin( "sayHello" );
                 Define a new jQuery plugin that extends from the Frontkit widget API.
             </p>
 
+            <div class="api-sub-title">
+                Arguments
+            </div>
             <ul class="list-unstyled api-arg-list">
                 <li>
                     <div>
@@ -244,6 +257,52 @@ $( ".element" ).myPlugin( "sayHello" );
                     </p>
                 </li>
             </ul>
+        </div>
+
+        <div class="panel api" id="jquery-factory-frontkit-log">
+            <div class="panel-header">
+                $.frontkit.log( [message] )
+            </div>
+
+            <p>
+                <strong>Description:</strong>
+                Write debug messages to the console (if it's available), prefixing them with the Frontkit version.<br>
+                This method depends on the <code>$.frontkit.debug</code> property - if it's falsy, no messages will be printed.
+            </p>
+
+            <div class="api-sub-title">
+                Arguments
+            </div>
+            <ul class="list-unstyled api-arg-list">
+                <li>
+                    <div>
+                        <strong>message</strong>
+                    </div>
+                    <p>Type: <code>String</code></p>
+                    <p>The message you want to print in the console.</p>
+                </li>
+            </ul>
+
+            <div class="api-sub-title">
+                Examples
+            </div>
+{% highlight javascript %}
+$.frontkit.log( "Hello World!" );
+// => [Frontkit 0.0.1] Hello World!
+{% endhighlight %}
+        </div>
+
+        <div class="panel api">
+            <div class="panel-header">
+                $.frontkit.debug
+            </div>
+
+            <p>Type: <code>Boolean</code>, default: <code>false</code></p>
+
+            <p>
+                Switch of the debug mode of Frontkit. Useful when you're developing a plugin and strange situations are happening.<br>
+                Settings this to a truthy value will let <code>$.frontkit.log()</code> to print their messages to the console.
+            </p>
         </div>
     </section>
 </article>
