@@ -60,6 +60,7 @@
     });
 
     $( "#collapse" ).collapse({
+        style: "top",
         element: $navbar.children( ".nav" )
     });
 

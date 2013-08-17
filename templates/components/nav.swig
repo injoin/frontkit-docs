@@ -12,6 +12,10 @@
 
     <section>
         <h4>Nav List</h4>
+        <p>
+            An nice navigation for sidebars, for example.
+            Use the class <code>.nav-list</code> to achieve it.
+        </p>
 
         <div class="docs-example">
             <ul class="nav nav-list">
@@ -35,6 +39,10 @@
 
     <section>
         <h4>Sub Nav</h4>
+        <p>
+            Useful navigation for when you want, for example, create filters.
+            Use it with the <code>.nav-sub</code> class, using the same markup:
+        </p>
 
         <div class="docs-example">
             <ul class="nav nav-sub">

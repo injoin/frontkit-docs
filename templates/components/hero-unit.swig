@@ -10,6 +10,7 @@
         <div class="hero-unit">
             <h1>Hello world</h1>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit vehicula erat et tempus.</p>
+            <button class="btn btn-primary" type="button">Download</button>
         </div>
     </div>
 {% highlight xml %}

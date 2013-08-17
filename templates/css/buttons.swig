@@ -121,4 +121,38 @@
 <input type="button" class="btn btn-default" value="Input">
 {% endhighlight %}
     </section>
+
+    <section id="css-buttons-disabled">
+        <h4>Disabled State</h4>
+        <p>Make buttons look unclickable.</p>
+
+        <h5>Button elements</h5>
+        <p>
+            For the elements that support it (<code>&lt;input&gt;</code> and <code>&lt;button&gt;</code>),
+            simply add the <code>disabled</code> attribute.
+        </p>
+        <div class="docs-example">
+            <button type="button" class="btn btn-default" disabled>Button</button>
+            <button type="button" class="btn btn-primary" disabled>Primary Button</button>
+        </div>
+{% highlight xml %}
+<button type="button" class="btn btn-default" disabled>Button</button>
+<button type="button" class="btn btn-primary" disabled>Primary Button</button>
+{% endhighlight %}
+
+        <h5>Anchor elements</h5>
+        <p>
+            When using <code>&lt;a&gt;</code> elements, you have to use the <code>.disabled</code> class
+            aswell to give buttons these styles.
+        </p>
+        <div class="docs-example">
+            <a href="#" class="btn btn-default disabled">Link</a>
+            <a href="#" class="btn btn-primary disabled">Primary Link</a>
+        </div>
+
+        <div class="alert alert-warning">
+            <strong>Beware that links functionality will not be impacted.</strong><br>
+            You'll need to use some JavaScript to make them really unclickable.
+        </div>
+    </section>
 </article>
