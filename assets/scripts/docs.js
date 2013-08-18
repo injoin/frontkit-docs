@@ -39,8 +39,17 @@
     $window.on( "hashchange", function() {
         // Ensure that will not try to find a nav link that is too deep
         // This is, try to find only the parent of the current hash
-        var hash = location.hash.split( "-" ).slice( 0, 2 );
-        $nav.find( "li a[href='" + hash.join( "-" ) + "']" ).trigger( "click" );
+        var hash, i, $link;
+        var hashParts = location.hash.split( "-" );
+
+        for ( i = hashParts.length; i > 0; i-- ) {
+            hash = hashParts.slice( 0, i ).join( "-" );
+            $link = $nav.find( "li a[href='" + hash + "']" );
+            if ( $link.length ) {
+                $link.trigger( "click" );
+                break;
+            }
+        }
     });
 
     $window.resize(function() {
