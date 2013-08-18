@@ -14,8 +14,8 @@
                 <fieldset>
                     <legend>My Form</legend>
                     <label>Label</label>
-                    <input type="text" placeholder="Type something here">
-                    <select>
+                    <input type="text" placeholder="Type something here" class="form-control">
+                    <select class="form-control">
                         <option value="1">Select option</option>
                         <option value="2">Select option</option>
                         <option value="3">Select option</option>
@@ -32,8 +32,8 @@
     <fieldset>
         <legend>My Form</legend>
         <label>Label</label>
-        <input type="text" placeholder="Type something here">
-        <select>
+        <input type="text" placeholder="Type something here" class="form-control">
+        <select class="form-control">
             <option value="1">Select option</option>
             <option value="2">Select option</option>
             <option value="3">Select option</option>
@@ -56,8 +56,8 @@
 
         <div class="docs-example">
             <form class="form-inline">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
+                <input type="text" placeholder="Username" class="form-control">
+                <input type="password" placeholder="Password" class="form-control">
                 <label class="checkbox">
                     <input type="checkbox">
                     Remember Me
@@ -81,37 +81,37 @@
 
         <h5>Inputs</h5>
         <p>The most common form control, text-based input field. It includes support for all HTML5 types:</p>
-        <ul class="list-unstyled row">
-            <li class="col small-3"><i class="icon icon-ok"></i> text</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> password</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> datetime</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> datetime-local</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> date</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> month</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> week</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> time</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> number</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> email</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> url</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> search</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> tel</li>
-            <li class="col small-3"><i class="icon icon-ok"></i> color</li>
+        <ul class="block-grid">
+            <li>text</li>
+            <li>password</li>
+            <li>datetime</li>
+            <li>datetime-local</li>
+            <li>date</li>
+            <li>month</li>
+            <li>week</li>
+            <li>time</li>
+            <li>number</li>
+            <li>email</li>
+            <li>url</li>
+            <li>search</li>
+            <li>tel</li>
+            <li>color</li>
         </ul>
 
         <div class="docs-example">
-            <input type="text" placeholder="Type something...">
+            <input type="text" placeholder="Type something..." class="form-control">
         </div>
 {% highlight xml %}
-<input type="text" placeholder="Type something...">
+<input type="text" placeholder="Type something..." class="form-control">
 {% endhighlight %}
 
         <h5>Textarea</h5>
         <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
         <div class="docs-example">
-            <textarea rows="3"></textarea>
+            <textarea rows="3" class="form-control"></textarea>
         </div>
 {% highlight xml %}
-<textarea rows="3"></textarea>
+<textarea rows="3" class="form-control"></textarea>
 {% endhighlight %}
 
         <h5>Checkboxes and radios</h5>
@@ -147,14 +147,14 @@
 
         <h5>Selects</h5>
         <div class="docs-example">
-            <select>
+            <select class="form-control">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <select multiple>
+            <select multiple class="form-control">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -163,12 +163,12 @@
             </select>
         </div>
 {% highlight xml %}
-<select>
+<select class="form-control">
     <option value="1">1</option>
     <option value="2">2</option>
     ...
 </select>
-<select multiple>
+<select multiple class="form-control">
     <option value="1">1</option>
     <option value="2">2</option>
     ...
@@ -189,16 +189,16 @@
             <li><code>disabled</code> fields will not be sent when the form is submited, and they will not allow you to access its value.</li>
         </ul>
         <div class="docs-example">
-            <input type="text" disabled value="I'm a disabled input">
-            <input type="text" readonly value="I'm a read-only input">
+            <input type="text" disabled value="I'm a disabled input" class="form-control">
+            <input type="text" readonly value="I'm a read-only input" class="form-control">
             <label class="checkbox">
                 <input type="checkbox" disabled>
                 You can't check this!
             </label>
         </div>
 {% highlight xml %}
-<input type="text" disabled value="I'm a disabled input">
-<input type="text" readonly value="I'm a read-only input">
+<input type="text" disabled value="I'm a disabled input" class="form-control">
+<input type="text" readonly value="I'm a read-only input" class="form-control">
 <label class="checkbox">
     <input type="checkbox" disabled>
     You can't check this!
@@ -208,7 +208,7 @@
         <h5>Focus</h5>
         <p>An smooth and beautiful style for your focused inputs.</p>
         <div class="docs-example">
-            <input type="text" id="focusedInput" placeholder="That's a focused input">
+            <input type="text" id="focusedInput" placeholder="That's a focused input" class="form-control">
         </div>
 
         <div>
@@ -218,18 +218,18 @@
             <div class="docs-example">
                 <div class="control-group">
                     <label>Input with warning</label>
-                    <input type="text" class="has-warning">
+                    <input type="text" class="form-control has-warning">
                 </div>
 
                 <div class="control-group has-error">
                     <label>Input with error</label>
-                    <input type="text">
+                    <input type="text" class="form-control">
                     <p class="input-help">I'm a error message!</p>
                 </div>
 
                 <div class="control-group">
                     <label>Input with success</label>
-                    <input type="text" class="has-success">
+                    <input type="text" class="form-control has-success">
                 </div>
             </div>
 {% highlight xml %}
@@ -262,49 +262,14 @@
         </p>
 
         <div class="docs-example">
-            <input type="text" class="input-small" placeholder="Small Input">
-            <textarea class="input-small" placeholder="Small Textarea"></textarea>
+            <input type="text" class="form-control input-small" placeholder="Small Input">
+            <textarea class="form-control input-small" placeholder="Small Textarea"></textarea>
 
             <br>
 
-            <input type="text" class="input-large" placeholder="Large Input">
-            <textarea class="input-large" placeholder="Large Textarea"></textarea>
+            <input type="text" class="form-control input-large" placeholder="Large Input">
+            <textarea class="form-control input-large" placeholder="Large Textarea"></textarea>
         </div>
-    </section>
-
-    <hr>
-
-    <!-- Input groups-->
-    <section id="css-forms-extending">
-        <h4>Input Groups</h4>
-        <p>Whenever you want to extend your form controls, there's the <code>.input-group</code> class!</p>
-
-        <div class="docs-example">
-            <div class="input-group col small-12">
-                <div class="input-group-addon">@</div>
-                <input type="text" placeholder="E-mail">
-            </div>
-
-            <div class="input-group col small-12">
-                <input type="search" placeholder="Search">
-                <div class="input-group-btn">
-                    <button class="btn btn-default"><i class="icon icon-search"></i></button>
-                </div>
-            </div>
-        </div>
-{% highlight xml %}
-<div class="input-group col small-12">
-    <div class="input-group-addon">@</div>
-    <input type="text" placeholder="E-mail">
-</div>
-
-<div class="input-group col small-12">
-    <input type="search" placeholder="Search">
-    <div class="input-group-btn">
-        <button class="btn btn-default"><i class="icon icon-search"></i></button>
-    </div>
-</div>
-{% endhighlight %}
     </section>
 
     <hr>
@@ -315,7 +280,7 @@
         <p>Block level help text for your forms.</p>
 
         <div class="docs-example">
-            <input type="text">
+            <input type="text" class="form-control">
             <p class="input-help">This field is required and only accepts phone numbers.</p>
         </div>
 {% highlight xml %}

@@ -11,14 +11,14 @@
 
     <div class="docs-example">
         <div class="navbar">
-            <a href="#" class="navbar-brand">Project Name</a>
+            <a href="#" class="navbar-brand">Title</a>
 
             <form class="navbar-form">
                 <div class="input-group">
-                    <input type="text" placeholder="Search..." />
+                    <input type="text" placeholder="Search..." class="form-control">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="button">
-                            <i class="icon icon-search"></i>
+                            Search
                         </button>
                     </div>
                 </div>
@@ -36,10 +36,10 @@
     <a href="#" class="navbar-brand">Project Name</a>
     <form class="navbar-form">
         <div class="input-group">
-            <input type="text" placeholder="Search..." />
+            <input type="text" placeholder="Search..." class="form-control">
             <div class="input-group-btn">
                 <button class="btn btn-default" type="button">
-                    <i class="icon icon-search"></i>
+                    Search
                 </button>
             </div>
         </div>

@@ -34,6 +34,7 @@
                         <li class="nav-header">Components</li>
                         <li><a href="#components-alerts">Alerts</a></li>
                         <li><a href="#components-hero-unit">Hero Unit</a></li>
+                        <li><a href="#components-input-groups">Input Groups</a></li>
                         <li><a href="#components-labels">Labels</a></li>
                         <li><a href="#components-nav">Navs</a></li>
                         <li><a href="#components-navbar">Navbar</a></li>
@@ -66,6 +67,7 @@
                     {# Components #}
                     {% include "components/alerts.swig" %}
                     {% include "components/hero-unit.swig" %}
+                    {% include "components/input-groups.swig" %}
                     {% include "components/labels.swig" %}
                     {% include "components/nav.swig" %}
                     {% include "components/navbar.swig" %}
