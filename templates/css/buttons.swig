@@ -105,7 +105,7 @@
         <h4>Button tags</h4>
         <p>
             You may use various tags for achieving that lovely buttons!<br>
-            Feel free to use <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code>.
+            Feel free to use <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> (and any of its 3 variants):
         </p>
 
         <div class="docs-example">
@@ -113,12 +113,14 @@
             <button type="button" class="btn btn-default">Button</button>
             <input type="submit" class="btn btn-default" value="Submit">
             <input type="button" class="btn btn-default" value="Input">
+            <input type="reset" class="btn btn-default" value="Reset">
         </div>
 {% highlight xml %}
 <a href="#" class="btn btn-default">Link</a>
 <button type="button" class="btn btn-default">Button</button>
 <input type="submit" class="btn btn-default" value="Submit">
 <input type="button" class="btn btn-default" value="Input">
+<input type="reset" class="btn btn-default" value="Reset">
 {% endhighlight %}
     </section>
 
