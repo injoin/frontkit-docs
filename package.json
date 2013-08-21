@@ -7,6 +7,11 @@
         "type": "git",
         "url":  "https://github.com/injoin/frontkit-docs.git"
     },
+    "scripts": {
+        "test": "grunt",
+        "postinstall": "cd frontkit && npm install -d",
+        "postupdate": "cd frontkit && npm update -d"
+    },
     "devDependencies": {
         "grunt":                "0.4.x",
         "grunt-contrib-less":   "0.7.x",
