@@ -16,11 +16,12 @@
     <div class="container">
         <div class="row">
             {# Navigation #}
-            <div  class="col large-3 docs-sidebar">
+            <div  class="col small-4 medium-3 docs-sidebar">
                 <nav id="nav" role="navigation">
                     <ul class="nav nav-list">
                         <li class="nav-header">CSS</li>
                         <li><a href="#css-grid">Grid</a></li>
+                        <li><a href="#css-block-grid">Block Grid</a></li>
                         <li><a href="#css-type">Typography</a></li>
                         <li><a href="#css-code">Code</a></li>
                         <li><a href="#css-lists">Lists</a></li>
@@ -50,10 +51,11 @@
             </div>
 
             {# Main Content #}
-            <div id="main" role="main" class="col large-9 docs-content">
+            <div id="main" role="main" class="col small-8 medium-9 docs-content">
                 <div class="doc-category" data-name="CSS">
                     {# CSS #}
                     {% include "css/grid.swig" %}
+                    {% include "css/block-grid.swig" %}
                     {% include "css/type.swig" %}
                     {% include "css/code.swig" %}
                     {% include "css/lists.swig" %}
