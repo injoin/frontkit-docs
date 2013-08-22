@@ -1,5 +1,6 @@
-<!-- Block Grid -->
-<article id="css-block-grid" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Block Grid</h3>
     </header>
@@ -10,7 +11,7 @@
         Block grids are super useful for creating rows of thumbnails, for example - and much more.
     </p>
 
-    <section id="css-block-grid-options">
+    <section id="block-grid-options">
         <h4>Block Grid Options</h4>
 
         <table class="table table-bordered table-striped">
@@ -38,7 +39,7 @@
             <tbody>
                 <tr>
                     <th>Max # of items per row</th>
-                    <td colspan="4">12 (default, same as the <a href="#css-grid-options">Grid</a>)</td>
+                    <td colspan="4">12 (default, same as the <a href="/docs/css/grid.html#grid-options">Grid</a>)</td>
                 </tr>
                 <tr>
                     <th>Class Prefix</th>
@@ -57,7 +58,7 @@
 
     <hr>
 
-    <section id="css-block-grid-example">
+    <section id="block-grid-example">
         <h4>Block Grid Example</h4>
 
         <p>
@@ -86,7 +87,7 @@
 
     <hr>
 
-    <section id="css-block-grid-nested">
+    <section id="block-grid-nested">
         <h4>Nested Block Grids</h4>
 
         <p>It's perfectly possible to have nested block grids aswell:</p>
@@ -128,4 +129,4 @@
 </div>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

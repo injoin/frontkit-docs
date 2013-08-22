@@ -1,11 +1,12 @@
-<!-- Typography-->
-<article id="css-type" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Typography</h3>
     </header>
 
     <!-- Paragraphs-->
-    <section id="css-type-paragraphs">
+    <section id="type-paragraphs">
         <h4>Paragraphs</h4>
         <p>
             FrontKit's <code>&lt;body&gt;</code> and all paragraphs get, by default, a <code>font-size</code> of <b>14px</b> and a <code>line-height</code> of <b>20px</b>,
@@ -34,7 +35,7 @@
     <hr>
 
     <!-- Headings-->
-    <section id="css-type-headings">
+    <section id="type-headings">
         <h4>Headings</h4>
         <p>As usual, use the good 'n old HTML headings, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></p>
         <div class="docs-example">
@@ -58,7 +59,7 @@
     <hr>
 
     <!-- Emphasis-->
-    <section id="css-type-emphasis">
+    <section id="type-emphasis">
         <h4>Emphasis</h4>
         <p>For emphasizing your text, some default HTML tags for you.</p>
 
@@ -79,13 +80,12 @@
 {% highlight xml %}
 <small>Don't waste your time caring about me :)</small>
 {% endhighlight %}
-
     </section>
 
     <hr>
 
     <!-- Text alignment-->
-    <section id="css-type-text-align">
+    <section id="type-text-align">
         <h4>Text Alignment</h4>
         <p>For easy realigning your text, here you have some useful classes:</p>
         <div class="docs-example">
@@ -103,7 +103,7 @@
     <hr>
 
     <!-- Abbreviations-->
-    <section id="css-type-abbr">
+    <section id="type-abbr">
         <h4>Abbreviations</h4>
         <div class="docs-example">JavaScript is abbreviated to <abbr title="JavaScript">JS</abbr>.</div>
 {% highlight xml %}
@@ -114,7 +114,7 @@ JavaScript is abbreviated to <abbr title="JavaScript">JS</abbr>.
     <hr>
 
     <!-- Addresses-->
-    <section id="css-type-address">
+    <section id="type-address">
         <h4>Addresses</h4>
         <div class="docs-example">
             <address>
@@ -133,7 +133,7 @@ JavaScript is abbreviated to <abbr title="JavaScript">JS</abbr>.
     <hr>
 
     <!-- Blockquotes-->
-    <section id="css-type-blockquote">
+    <section id="type-blockquote">
         <h4>Blockquotes</h4>
         <p>For quoting blocks of content from another source.</p>
 
@@ -162,4 +162,4 @@ JavaScript is abbreviated to <abbr title="JavaScript">JS</abbr>.
 </blockquote>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

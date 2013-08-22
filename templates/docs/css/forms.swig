@@ -1,11 +1,12 @@
-<!-- Forms-->
-<article id="css-forms" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Forms</h3>
     </header>
 
     <!-- Default styles-->
-    <section id="css-forms-default">
+    <section id="forms-default">
         <h4>Default styles</h4>
         <p>Without large changes in your markup or extra classes, you can get a nicely styled form. Results in a nice, stacked, mobile-first form.</p>
 
@@ -50,7 +51,7 @@
     <hr>
 
     <!-- Inline layout-->
-    <section id="css-forms-inline">
+    <section id="forms-inline">
         <h4>Inline layout</h4>
         <p>Add <code>.form-inline</code> to get a compact form layout.</p>
 
@@ -75,7 +76,7 @@
     <hr>
 
     <!-- Supported Controls-->
-    <section id="css-forms-controls">
+    <section id="forms-controls">
         <h4>Supported controls</h4>
         <p>Here are examples of all supported form controls.</p>
 
@@ -179,7 +180,7 @@
     <hr>
 
     <!-- Control States -->
-    <section id="css-forms-states">
+    <section id="forms-states">
         <h4>Control States</h4>
 
         <h5>Disabled/read-only inputs</h5>
@@ -254,7 +255,7 @@
     <hr>
 
     <!-- Input Sizing -->
-    <section id="css-forms-sizing">
+    <section id="forms-sizing">
         <h4>Input Sizing</h4>
         <p>
             Ever needed bigger or smaller inputs?
@@ -275,7 +276,7 @@
     <hr>
 
     <!-- Input help text -->
-    <section id="css-forms-help">
+    <section id="forms-help">
         <h4>Help Text</h4>
         <p>Block level help text for your forms.</p>
 
@@ -288,4 +289,4 @@
 <p class="input-help">This field is required and only accepts phone numbers.</p>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

@@ -1,5 +1,6 @@
-<!-- Hero Unit -->
-<article id="components-hero-unit" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Hero Unit</h3>
     </header>
@@ -19,4 +20,4 @@
     <p class="lead">Lorem ipsum dolor sit amet, ...</p>
 </div>
 {% endhighlight %}
-</article>
+{% endblock %}

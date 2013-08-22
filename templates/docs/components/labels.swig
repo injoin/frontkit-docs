@@ -1,5 +1,6 @@
-<!-- Labels -->
-<article id="components-labels" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Labels</h3>
     </header>
@@ -63,4 +64,4 @@
             </tr>
         </tbody>
     </table>
-</article>
+{% endblock %}

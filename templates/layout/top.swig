@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width">
 
         {# Styles #}
-        <link rel="stylesheet" href="assets/styles/frontkit.css">
-        <link rel="stylesheet" href="assets/styles/docs.css">
-        <link rel="stylesheet" href="assets/vendor/highlight.css">
+        <link rel="stylesheet" href="/assets/styles/frontkit.css">
+        <link rel="stylesheet" href="/assets/styles/docs.css">
+        <link rel="stylesheet" href="/assets/vendor/highlight.css">
     </head>
     <body class="docs">
         {# Navbar #}
@@ -21,7 +21,7 @@
 
             <a href="index.html" class="navbar-brand">{{ pkg.title }}</a>
             <ul class="nav navbar-nav">
-                <li class="{{ docs }}"><a href="docs.html">Docs</a></li>
-                <li class="{{ tests }}"><a href="unit-tests.html">Unit Tests</a></li>
+                <li class="{{ docs }}"><a href="/docs/index.html">Docs</a></li>
+                <li class="{{ tests }}"><a href="/unit-tests.html">Unit Tests</a></li>
             </ul>
         </div>

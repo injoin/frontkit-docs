@@ -1,11 +1,12 @@
-<!-- Buttons-->
-<article id="css-buttons" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Buttons</h3>
     </header>
 
     <!-- Options-->
-    <section id="css-buttons-options">
+    <section id="buttons-options">
         <h4>Button options</h4>
         <p>Various styles for the best purpose of your button.</p>
 
@@ -77,7 +78,7 @@
     </section>
 
     <!-- Sizes-->
-    <section id="css-buttons-sizes">
+    <section id="buttons-sizes">
         <h4>Button Sizes</h4>
         <p>Need bigger or smaller buttons? Go with <code>.btn-large</code> or <code>.btn-small</code>!</p>
 
@@ -101,7 +102,7 @@
 {% endhighlight %}
     </section>
 
-    <section id="css-buttons-tags">
+    <section id="buttons-tags">
         <h4>Button tags</h4>
         <p>
             You may use various tags for achieving that lovely buttons!<br>
@@ -124,7 +125,7 @@
 {% endhighlight %}
     </section>
 
-    <section id="css-buttons-disabled">
+    <section id="buttons-disabled">
         <h4>Disabled State</h4>
         <p>Make buttons look unclickable.</p>
 
@@ -157,4 +158,4 @@
             You'll need to use some JavaScript to make them really unclickable.
         </div>
     </section>
-</article>
+{% endblock %}

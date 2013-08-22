@@ -1,5 +1,6 @@
-<!-- Frontkit jQuery API -->
-<article id="jquery-factory" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>jQuery Widget Factory</h3>
     </header>
@@ -27,7 +28,7 @@ $( ".element" ).myPlugin( "sayHello" );
 
     <hr>
 
-    <section id="jquery-factory-widget-api">
+    <section id="factory-widget-api">
         <h4>The Widget API</h4>
         <p>
             When you define a new widget with <code>$.frontkit()</code>, you're defining the prototype
@@ -42,9 +43,7 @@ $( ".element" ).myPlugin( "sayHello" );
             <div class="panel api">
                 <ul class="list-unstyled api-arg-list">
                     <li>
-                        <div>
-                            <strong>_initialize()</strong>
-                        </div>
+                        <span class="api-arg-name">_initialize()</span>
                         <p>Type: <code>Function</code></p>
                         <p>
                             A initialization function. Runs after the widget options have been set and before
@@ -52,9 +51,7 @@ $( ".element" ).myPlugin( "sayHello" );
                         </p>
                     </li>
                     <li>
-                        <div>
-                            <strong>_destroy()</strong>
-                        </div>
+                        <span class="api-arg-name">_destroy()</span>
                         <p>Type: <code>Function</code></p>
                         <p>
                             A destruction function. When you call <code>myPlugin( "destroy" )</code>, this
@@ -62,9 +59,7 @@ $( ".element" ).myPlugin( "sayHello" );
                         </p>
                     </li>
                     <li>
-                        <div>
-                            <strong>options</strong>
-                        </div>
+                        <span class="api-arg-name">options</span>
                         <p>Type: <code>Object</code></p>
                         <p>
                             An special object in the API which can go through the <strong>_setOption</strong>
@@ -73,9 +68,7 @@ $( ".element" ).myPlugin( "sayHello" );
                         </p>
                     </li>
                     <li>
-                        <div>
-                            <strong>_setOption( name, value )</strong>
-                        </div>
+                        <span class="api-arg-name">_setOption( name, value )</span>
                         <p>Type: <code>Function</code></p>
                         <p>
                             A function which gets called whenever an option is set. You may validate
@@ -96,7 +89,7 @@ $( ".element" ).myPlugin( "sayHello" );
                 some common tasks in a DOM environment. Important: <strong>do not overwrite them</strong>!
             </p>
 
-            <div class="panel api" id="jquery-factory-widget-_on">
+            <div class="panel api" id="factory-widget-_on">
                 <div class="panel-header">
                     <a href="#jquery-factory-widget-_on">_trigger( type[, event][, data] )</a>
                 </div>
@@ -109,9 +102,7 @@ $( ".element" ).myPlugin( "sayHello" );
                 </div>
                 <ul class="list-unstyled api-arg-list">
                     <li>
-                        <div>
-                            <strong>type</strong>
-                        </div>
+                        <span class="api-arg-name">type</span>
                         <p>Type: <code>String</code></p>
                         <p>
                             The type of the event. It'll be prefixed by the name of the plugin; i.e.
@@ -119,9 +110,7 @@ $( ".element" ).myPlugin( "sayHello" );
                         </p>
                     </li>
                     <li>
-                        <div>
-                            <strong>event</strong>
-                        </div>
+                        <span class="api-arg-name">event</span>
                         <p>Type: <code>Object</code></p>
                         <p>
                             An plain object which can default some properties of the
@@ -129,16 +118,14 @@ $( ".element" ).myPlugin( "sayHello" );
                         </p>
                     </li>
                     <li>
-                        <div>
-                            <strong>data</strong>
-                        </div>
+                        <span class="api-arg-name">data</span>
                         <p>Type: <code>Any</code></p>
                         <p>Any data which will be directly passed to the event listener.</p>
                     </li>
                 </ul>
             </div>
 
-            <div class="panel api" id="jquery-factory-widget-_on">
+            <div class="panel api" id="factory-widget-_on">
                 <div class="panel-header">
                     <a href="#jquery-factory-widget-_on">_on( event[, selector], handler( eventObject ) )</a>
                 </div>
@@ -154,23 +141,17 @@ $( ".element" ).myPlugin( "sayHello" );
                 </div>
                 <ul class="list-unstyled api-arg-list">
                     <li>
-                        <div>
-                            <strong>event</strong>
-                        </div>
+                        <span class="api-arg-name">event</span>
                         <p>Type: <code>String</code></p>
                         <p>The name of the event that will be bound.</p>
                     </li>
                     <li>
-                        <div>
-                            <strong>selector</strong>
-                        </div>
+                        <span class="api-arg-name">selector</span>
                         <p>Type: <code>String</code></p>
                         <p>An optional selector to delegate the event to.</p>
                     </li>
                     <li>
-                        <div>
-                            <strong>handler( eventObject )</strong>
-                        </div>
+                        <span class="api-arg-name">handler( eventObject )</span>
                         <p>Type: <code>Function</code></p>
                         <p>
                             The event handler. Takes by default only the
@@ -180,7 +161,7 @@ $( ".element" ).myPlugin( "sayHello" );
                 </ul>
             </div>
 
-            <div class="panel api" id="jquery-factory-widget-_off">
+            <div class="panel api" id="factory-widget-_off">
                 <div class="panel-header">
                     <a href="#jquery-factory-widget-_off">_off( event[, selector] )</a>
                 </div>
@@ -195,16 +176,12 @@ $( ".element" ).myPlugin( "sayHello" );
                 </div>
                 <ul class="list-unstyled api-arg-list">
                     <li>
-                        <div>
-                            <strong>event</strong>
-                        </div>
+                        <span class="api-arg-name">event</span>
                         <p>Type: <code>String</code></p>
                         <p>The name of the event that will be unbound.</p>
                     </li>
                     <li>
-                        <div>
-                            <strong>selector</strong>
-                        </div>
+                        <span class="api-arg-name">selector</span>
                         <p>Type: <code>String</code></p>
                         <p>An optional selector to undelegate events from.</p>
                     </li>
@@ -215,9 +192,9 @@ $( ".element" ).myPlugin( "sayHello" );
 
     <hr>
 
-    <section id="jquery-factory-api">
+    <section id="factory-api">
         <h4>Widget Factory API</h4>
-        <div class="panel api" id="jquery-factory-frontkit">
+        <div class="panel api" id="factory-frontkit">
             <div class="panel-header">
                 <a href="#jquery-factory-frontkit">$.frontkit( widgetName[, widgetAPI] )</a>
             </div>
@@ -232,9 +209,7 @@ $( ".element" ).myPlugin( "sayHello" );
             </div>
             <ul class="list-unstyled api-arg-list">
                 <li>
-                    <div>
-                        <strong>widgetName</strong>
-                    </div>
+                    <span class="api-arg-name">widgetName</span>
                     <p>Type: <code>String</code></p>
                     <p>
                         The name of your widget; this will also define the jQuery method that you should call
@@ -246,9 +221,7 @@ $( ".element" ).myPlugin( "sayHello" );
                     </p>
                 </li>
                 <li>
-                    <div>
-                        <strong>widgetAPI</strong>
-                    </div>
+                    <span class="api-arg-name">widgetAPI</span>
                     <p>Type: <code>Object</code></p>
                     <p>
                         This is the API you would like to implement in your plugin.
@@ -259,7 +232,7 @@ $( ".element" ).myPlugin( "sayHello" );
             </ul>
         </div>
 
-        <div class="panel api" id="jquery-factory-frontkit-log">
+        <div class="panel api" id="factory-frontkit-log">
             <div class="panel-header">
                 $.frontkit.log( [message] )
             </div>
@@ -275,9 +248,7 @@ $( ".element" ).myPlugin( "sayHello" );
             </div>
             <ul class="list-unstyled api-arg-list">
                 <li>
-                    <div>
-                        <strong>message</strong>
-                    </div>
+                    <span class="api-arg-name">message</span>
                     <p>Type: <code>String</code></p>
                     <p>The message you want to print in the console.</p>
                 </li>
@@ -305,4 +276,4 @@ $.frontkit.log( "Hello World!" );
             </p>
         </div>
     </section>
-</article>
+{% endblock %}

@@ -1,11 +1,12 @@
-<!-- Code-->
-<article id="css-code" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Code</h3>
     </header>
 
     <!-- Inline-->
-    <section id="css-code-inline">
+    <section id="code-inline">
         <h4>Inline</h4>
         <p>Wrap simple snippets of code with <code>&lt;code&gt;</code>.</p>
 
@@ -18,7 +19,7 @@
     </section>
 
     <!-- Block-->
-    <section id="css-code-block">
+    <section id="code-block">
         <h4>Block</h4>
         <p>For more lines of code, you should go with the <code>&lt;pre&gt;</code> tag.</p>
 
@@ -31,7 +32,7 @@
     </section>
 
     <!-- Keyboard -->
-    <section id="css-code-keyboard">
+    <section id="code-keyboard">
         <h4>Keyboard</h4>
         <p>Want to highlight some keystroke? You may use the tag <code>&lt;kbd&gt;</code> for this purpose:</p>
 
@@ -42,4 +43,4 @@
 <kbd>Ctrl</kbd> + <kbd>C</kbd> is used to copy things.
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

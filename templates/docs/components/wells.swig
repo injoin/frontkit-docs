@@ -1,5 +1,6 @@
-<!-- Wells -->
-<article id="components-wells" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Wells</h3>
     </header>
@@ -39,4 +40,4 @@
 <div class="well well-small">...</div>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

@@ -1,5 +1,6 @@
-<!-- Grid System-->
-<article id="css-grid" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Grid System</h3>
     </header>
@@ -8,7 +9,7 @@
         system of 12 columns that scales up or down as needed.
     </p>
 
-    <section id="css-grid-options">
+    <section id="grid-options">
         <h4>Grid Options</h4>
         <p>Check the below table to find out how the grid system will work on diferent resolutions.</p>
 
@@ -69,7 +70,7 @@
     <hr>
 
     <!-- Grid example-->
-    <section id="css-grid-default">
+    <section id="grid-default">
         <h4>Grid example</h4>
         <p>
             Some rows of the below grid will show up differently when in a small screen width (less than 768px).
@@ -148,7 +149,7 @@
     </section>
 
     <!-- Offset-->
-    <section id="css-grid-offset">
+    <section id="grid-offset">
         <h4>Offsetting columns</h4>
         <p>
             Put some extra margin between two grid columns using the offset classes
@@ -178,4 +179,4 @@
 </div>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

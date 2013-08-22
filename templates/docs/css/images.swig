@@ -1,5 +1,6 @@
-<!-- Images -->
-<article id="css-images" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Images</h3>
     </header>
@@ -16,4 +17,4 @@
 <img src="..." class="img-circle">
 <img src="..." class="img-bordered">
 {% endhighlight %}
-</article>
+{% endblock %}

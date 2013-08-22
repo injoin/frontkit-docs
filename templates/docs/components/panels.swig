@@ -1,5 +1,6 @@
-<!-- Panels -->
-<article id="components-panels" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Panels</h3>
     </header>
@@ -87,4 +88,4 @@
     </div>
 </div>
 {% endhighlight %}
-</article>
+{% endblock %}

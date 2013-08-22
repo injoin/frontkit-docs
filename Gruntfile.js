@@ -44,6 +44,17 @@ module.exports = function( grunt ) {
             }
         },
 
+        // HTTP server
+        // ------------------------------------------------------------
+        connect: {
+            server: {
+                options: {
+                    port: 8000,
+                    base: "."
+                }
+            }
+        },
+
         // Copy
         // ------------------------------------------------------------
         copy: {
@@ -75,7 +86,7 @@ module.exports = function( grunt ) {
                     tags: require( "./build/swig-tags" )
                 },
                 cwd: "templates/",
-                src: [ "*.swig" ],
+                src: [ "docs/**/*.swig", "*.swig" ],
                 dest: "./",
                 generateSitemap: false,
                 generateRobotstxt: false,
@@ -101,6 +112,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( "grunt-contrib-copy" );
     grunt.loadNpmTasks( "grunt-contrib-less" );
     grunt.loadNpmTasks( "grunt-contrib-watch" );
+    grunt.loadNpmTasks( "grunt-contrib-connect" );
 
-    grunt.registerTask( "default", [ "hub:submodule", "copy", "less", "swig" ]);
+    grunt.registerTask( "default", [ "hub:submodule", "copy", "less", "swig", "connect" ]);
 };

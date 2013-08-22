@@ -1,11 +1,12 @@
-<!-- Tables-->
-<article id="css-tables" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Tables</h3>
     </header>
 
     <!-- Basic-->
-    <section id="css-tables-basic">
+    <section id="tables-basic">
         <h4>Basic example</h4>
         <p>The most simple, yet efficient, table styles you've ever seen! Just add the base class <code>.table</code> to any table, and you're done.</p>
 
@@ -56,7 +57,7 @@
         <h4>Optional styles</h4>
         <p>Some optional styles to your tables. Use them altogether with the base <code>.table</code> class.</p>
 
-        <div id="css-tables-striped">
+        <div id="tables-striped">
             <h5>Striped</h5>
             <div class="docs-example">
                 <table class="table table-striped">
@@ -98,7 +99,7 @@
             </div>
         </div>
 
-        <div id="css-tables-bordered">
+        <div id="tables-bordered">
             <h5>Bordered</h5>
             <div class="docs-example">
                 <table class="table table-bordered">
@@ -140,7 +141,7 @@
             </div>
         </div>
 
-        <div id="css-tables-hover">
+        <div id="tables-hover">
             <h5>Hover</h5>
             <div class="docs-example">
                 <table class="table table-hover">
@@ -182,4 +183,4 @@
             </div>
         </div>
     </section>
-</article>
+{% endblock %}

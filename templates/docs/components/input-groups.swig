@@ -1,5 +1,6 @@
-<!-- Input Groups -->
-<article id="components-input-groups" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Input Groups</h3>
     </header>
@@ -56,7 +57,7 @@
 </div>
 {% endhighlight %}
 
-    <section id="components-input-groups-sizing">
+    <section id="input-groups-sizing">
         <h4>Optional Sizes</h4>
 
         <p>
@@ -169,4 +170,4 @@
 </div>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

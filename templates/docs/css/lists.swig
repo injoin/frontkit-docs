@@ -1,11 +1,12 @@
-<!-- Lists-->
-<article id="css-lists" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Lists</h3>
     </header>
 
     <!-- Unordered-->
-    <section id="css-lists-unordered">
+    <section id="lists-unordered">
         <h4>Unordered</h4>
         <div class="docs-example">
             <ul>
@@ -38,7 +39,7 @@
     </section>
 
     <!-- Ordered-->
-    <section id="css-lists-ordered">
+    <section id="lists-ordered">
         <h4>Ordered</h4>
         <div class="docs-example">
             <ol>
@@ -71,7 +72,7 @@
     </section>
 
     <!-- Unstyled-->
-    <section id="css-lists-unstyled">
+    <section id="lists-unstyled">
         <h4>Unstyled</h4>
         <div class="docs-example">
             <ul class="list-unstyled">
@@ -104,7 +105,7 @@
     </section>
 
     <!-- Inline-->
-    <section id="css-lists-inline">
+    <section id="lists-inline">
         <h4>Inline</h4>
         <div class="docs-example">
             <ul class="list-inline">
@@ -121,4 +122,4 @@
 </ul>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

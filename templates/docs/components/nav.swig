@@ -1,5 +1,6 @@
-<!-- Nav -->
-<article id="components-nav" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Navs</h3>
     </header>
@@ -63,4 +64,4 @@
 </ul>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}

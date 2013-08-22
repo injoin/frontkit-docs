@@ -1,5 +1,6 @@
-<!-- Alerts -->
-<article id="components-alerts" class="docs-article">
+{% extends "layout/docs.swig" %}
+
+{% block docs %}
     <header class="page-header">
         <h3>Alerts</h3>
     </header>
@@ -73,4 +74,4 @@
 </div>
 {% endhighlight %}
     </section>
-</article>
+{% endblock %}
