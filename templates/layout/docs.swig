@@ -51,6 +51,7 @@
                         <li class="nav-header">jQuery</li>
                         <li><a href="/docs/jquery/factory.html">Widget Factory</a></li>
                         <li><a href="/docs/jquery/affix.html">Affix</a></li>
+                        <li><a href="/docs/jquery/collapse.html">Collapse</a></li>
                     </ul>
                 </nav>
             </div>
