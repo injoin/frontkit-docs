@@ -19,7 +19,7 @@
                 <span class="bar"></span>
             </button>
 
-            <a href="index.html" class="navbar-brand">{{ pkg.title }}</a>
+            <a href="/index.html" class="navbar-brand">{{ pkg.title }}</a>
             <ul class="nav navbar-nav">
                 <li class="{{ docs }}"><a href="/docs/index.html">Docs</a></li>
                 <li class="{{ tests }}"><a href="/unit-tests.html">Unit Tests</a></li>

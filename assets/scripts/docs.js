@@ -30,7 +30,7 @@
 
     // Make the navigation affixed
     $nav.affix({
-        offsetTop: $navbar.height(),
+        offsetTop: $navbar.height() + 10,
         offsetBottom: 60
     });
 
