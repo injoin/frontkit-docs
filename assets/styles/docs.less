@@ -26,6 +26,30 @@ body {
   background: fade( @gray-lighter, 50% );
 }
 
+// Menu
+// ----
+.nav-group {
+  .nav {
+    display: none;
+    margin-bottom: 0;
+  }
+
+  + .nav-group {
+    margin-top: -1px;
+  }
+}
+
+.nav-group, .nav-expand {
+  border: 1px solid @gray-light;
+}
+
+.nav-expand {
+  margin: -1px;
+  padding: 10px;
+  background: @gray-lighter;
+  cursor: pointer;
+}
+
 // Grid Examples
 // -------------
 .grid-example {
