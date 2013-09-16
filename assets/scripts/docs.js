@@ -21,6 +21,12 @@
         $nav.width( $nav.parent().width() );
     }).triggerHandler( "resize" );
 
+    $( ".open-modal" ).click(function( e ) {
+        e.preventDefault();
+
+        $( "#" + $( this ).data( "modal" ) ).modal( "open" );
+    });
+
     // Page adjustments
     // -----------------------------------------------
     // Highlight the current active doc nav link
