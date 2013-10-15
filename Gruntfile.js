@@ -17,8 +17,8 @@ module.exports = function( grunt ) {
             },
 
             docs: {
-                files: [ "templates/**/*.jade" ],
-                tasks: [ "jade" ]
+                files: [ "templates/**/*.swig" ],
+                tasks: [ "swig" ]
             },
 
             // Allows us to recompile our docs whenever we change something in mixins/variables files
