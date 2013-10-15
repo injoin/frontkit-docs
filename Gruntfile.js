@@ -17,8 +17,8 @@ module.exports = function( grunt ) {
             },
 
             docs: {
-                files: [ "templates/**/*.swig" ],
-                tasks: [ "swig" ]
+                files: [ "templates/**/*.jade" ],
+                tasks: [ "jade" ]
             },
 
             // Allows us to recompile our docs whenever we change something in mixins/variables files
@@ -50,7 +50,7 @@ module.exports = function( grunt ) {
             server: {
                 options: {
                     port: 8000,
-                    base: ".",
+                      base: ".",
                     keepalive: true
                 }
             }
@@ -82,17 +82,15 @@ module.exports = function( grunt ) {
         // ------------------------------------------------------------
         swig: {
             docs: {
-                init: {
-                    root: "templates/",
+                options: {
+                    locals: {
+                        pkg: pkg
+                    },
                     tags: require( "./build/swig-tags" )
                 },
                 cwd: "templates/",
                 src: [ "docs/**/*.swig", "*.swig" ],
-                dest: "./",
-                generateSitemap: false,
-                generateRobotstxt: false,
-
-                pkg: pkg
+                dest: "./"
             }
         },
 
@@ -108,11 +106,12 @@ module.exports = function( grunt ) {
     });
 
     // Load all deps...
+    grunt.loadTasks( "build/tasks" );
     grunt.loadNpmTasks( "grunt-hub" );
-    grunt.loadNpmTasks( "grunt-swig" );
     grunt.loadNpmTasks( "grunt-contrib-copy" );
     grunt.loadNpmTasks( "grunt-contrib-less" );
     grunt.loadNpmTasks( "grunt-contrib-watch" );
+    grunt.loadNpmTasks( "grunt-contrib-jade" );
     grunt.loadNpmTasks( "grunt-contrib-connect" );
 
     grunt.registerTask( "default", [ "hub:submodule", "copy", "less", "swig" ]);

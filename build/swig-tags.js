@@ -1,18 +1,37 @@
-var hljs = require( "highlight.js" );
-hljs.tabReplace = "    ";
+exports.highlight = (function() {
+    var hljs = require( "highlight.js" );
+    hljs.tabReplace = "    ";
 
-exports.highlight = function() {
-    var output = "";
-    var value = this.tokens.join( "" );
-    var language = this.args[ 0 ];
+    function parse( str, line, parser, types ) {
+        parser.on( types.VAR, function( token ) {
+            this.out.push( "\"" + token.match + "\"" );
+            return true;
+        });
 
-    // Finally, highlight the code
-    value = hljs.highlight( language, value.trim() ).value;
+        return true;
+    }
 
-    output += "<pre class=\"highlight language-" + language + "\">";
-    output += value.replace( /\r?\n/g, "\\n" ).split( "'" ).join( "\\'" );
-    output += "</pre>";
+    function compile( compiler, args, content, parents, options, blockName ) {
+        var output = "";
 
-    return "_output += '" + output + "';";
-};
-exports.highlight.ends = true;
+        output += "(function() {\n";
+        output += " var lang = " + args[ 0 ] + ";\n";
+        output += " var __o = _output;\n";
+        output += " _output = '';\n";
+        output +=   compiler( content, parents, options, blockName ) + ";\n";
+        output += " __o += '<pre class=\"highlight language-' + lang + '\">';\n";
+        output += " __o += _ext.highlight(" + args[ 0 ] + ", _output).value;\n";
+        output += " __o += '</pre>';\n";
+        output += " _output = __o;\n";
+        output += "})();\n";
+
+        return output;
+    }
+
+    return {
+        ext: hljs.highlight,
+        ends: true,
+        parse: parse,
+        compile: compile
+    };
+})();
